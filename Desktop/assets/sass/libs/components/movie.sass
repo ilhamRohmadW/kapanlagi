@@ -1,0 +1,183 @@
+.section
+    &--HMovie 
+        @apply mb-0
+        &-swiper 
+            &.swiper
+                --swiper-theme-color: white
+                --swiper-pagination-bullet-inactive-color: white
+                --swiper-pagination-bullet-inactive-opacity: .4
+                
+                @apply -mx-4
+                .swiper
+                    &-pagination
+                        @apply w-max left-0 ml-4 
+                        &-bullet
+                            @apply ml-0 mr-4
+                            &-active
+                                @apply relative
+                                @apply before:animate-ping before:bg-white before:absolute before:inset-0 before:rounded-full
+    &--top10
+        .section--slide25-swiper
+            &.swiper
+                counter-reset: my-awesome-counter
+                @apply -ml-4 pl-4
+                // @apply lg:ml-0 lg:pl-0
+                .swiper
+                    &-slide
+                        counter-increment: my-awesome-counter
+                        @apply w-44 before:text-transparent before:text-6xl before:font-head before:-mb-8 before:block before:relative before:z-10
+                        &::before
+                            content: counter(my-awesome-counter, decimal-leading-zero)
+                            -webkit-text-stroke: 1.4px white
+                        .item25-desc
+                            @apply border-l-0 pl-0
+    &--cast
+        .swiper
+            @apply -mb-6 -mx-4 px-4
+            &-slide
+                @apply mt-0 mb-6 mr-4! w-auto inline-block
+            &-button
+                &-disabled
+                    @apply opacity-0
+                &-prev,
+                &-next
+                    @apply after:hidden size-8 shadow-md rounded-full bg-white
+@layer components 
+    .header25--movie 
+        @apply bg-fifth 
+        .header25-fixed 
+            @apply bg-fifth/70! text-white!
+    .item-25HMovie
+        .item25
+            &-desc
+                @apply absolute pl-4 pb-12 pt-32 bottom-0 inset-x-0 pointer-events-none *:pointer-events-auto z-20 flex flex-col gap-2 pr-80
+    .item25
+        &--review
+            .item25
+                &-desc
+                    @apply pl-0! border-l-0!
+        &-rating
+            @apply flex items-center gap-1 mb-2
+            &-item
+                @apply flex items-center py-0.5 px-1 gap-1
+            &-imdb
+                @apply w-7 h-auto
+        &-place
+            @apply flex items-center gap-0.5 mt-1
+
+        &--movies
+            @apply gap-3
+            .item25
+                &-image
+                    @apply overflow-hidden shrink-0
+                &-desc
+                    @apply flex flex-col h-full
+                    &-title
+                        @apply mb-1 group-has-[.item25-btn]:flex-1
+                &-btn
+                    @apply border py-2.5 flex justify-center transition-colors mt-3
+        &--event
+            @apply flex-row items-start
+            .item25
+                &-desc
+                    @apply flex-1 flex flex-col
+                    &-title
+                        @apply mb-1.5
+                &-image
+                    @apply shrink-0 w-30
+        &--cast
+            @apply flex-row items-center gap-4
+            .item25
+                &-image
+                    @apply overflow-hidden rounded-full size-12
+                &-detail
+                    @apply flex flex-col gap-0.5
+        &--show
+            @apply flex-row items-center gap-4
+            .item25-image
+                @apply size-12 overflow-hidden rounded-full
+    .section
+        &--event
+            &-list
+                @apply grid grid-cols-3 gap-7
+        &--schedule
+            &-list
+                @apply grid grid-cols-4 gap-x-8 gap-y-6 mb-12
+            &-city
+                @apply flex items-stretch mb-6 max-w-xs
+                &-title
+                    @apply px-3 py-1 block
+                &-select
+                    @apply border p-2 outline-none flex-1
+        &--DTMovie
+            &-headline
+                @apply block relative after:z-10 after:absolute after:inset-0 after:pointer-events-none
+                &-overlay
+                    @apply absolute pointer-events-none inset-0 flex items-center justify-center
+                &-icon
+                    @apply relative z-20
+            &-wrapper
+                @apply relative flex items-start -mt-32 px-10 mb-5 z-10 gap-6
+                &-detail
+                    @apply flex-1 flex flex-col gap-4
+            &-share
+                @apply flex justify-between
+            &-tag
+                @apply py-1 px-6 transition-colors
+            &-production
+                @apply flex items-center gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full
+            &-poster
+                @apply w-1/4 aspect-[3/4] rounded-xl overflow-hidden
+            &-director
+                @apply flex flex-col
+            &-rating
+                @apply flex items-center gap-5
+                &-item
+                    @apply flex items-center gap-2 px-3 py-1
+            &-desc
+                @apply px-10 pb-6
+            &-genre
+                @apply flex justify-center items-center gap-2 flex-wrap
+                &-item
+                    @apply py-1 px-3 transition-colors
+        &-titleWlink
+            &.--border
+                @apply border-b pb-4
+                .section-titleWlink
+                    &-link
+                        @apply relative
+                        @apply before:absolute before:h-0.5 before:bg-black before:w-4 before:inset-y-0 before:left-0 before:my-auto before:transition-all
+                        &:hover
+                            &::before
+                                @apply -translate-x-4 
+                        svg
+                            @apply transition-transform group-hover:-translate-x-1 h-auto
+        &--writer
+            &-list
+                @apply flex flex-wrap gap-4
+                &-item
+                    @apply *:flex *:items-center *:gap-4
+        &--show-on
+            &-list
+                @apply flex flex-wrap gap-4
+    .tab25--schedule
+        .tab25
+            &-nav 
+                @apply *:min-h-10 whitespace-nowrap max-w-xl mb-8
+                &-btn
+                    @apply border
+                    &.active 
+                        @apply border-black bg-black text-white
+    .share25
+        @apply flex items-center gap-3
+        &-item
+            @apply size-9 rounded-full flex items-center justify-center transition-colors
+            svg
+                @apply transition-transform group-hover:scale-110
+    .readmore25
+        @apply mb-5
+        &-btn
+            @apply ml-2 font-bold
+    
+    .divide-dots
+        @apply *:*:after:size-1 *:*:after:rounded-full *:last:*:after:hidden

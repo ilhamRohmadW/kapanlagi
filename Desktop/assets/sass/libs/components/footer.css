@@ -1,0 +1,23 @@
+@layer components {
+  .footer25 {
+    @apply py-8 {}
+  }
+  .footer25-logo {
+    @apply inline-block align-middle mb-4 {}
+  }
+  .footer25-top {
+    @apply flex flex-wrap gap-x-8 pb-4 border-b mb-4 {}
+  }
+  .footer25-row {
+    @apply flex items-center justify-between gap-x-8 mb-4 {}
+  }
+  .footer25-row-sites {
+    @apply grid grid-cols-5 gap-2 *:flex *:items-center *:gap-x-2 {}
+  }
+  .footer25-row-connect {
+    @apply flex flex-col gap-2 {}
+  }
+  .footer25-row-connect-list {
+    @apply flex items-center gap-x-2 {}
+  }
+}

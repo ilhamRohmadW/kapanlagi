@@ -1,0 +1,36 @@
+@layer utilities
+
+@layer components
+    .header25
+        @apply relative min-h-16
+        &-logoBig 
+            @apply inline-block align-middle my-4 relative z-10
+        &-fixed 
+            @apply absolute top-0 inset-x-0 transition h-16
+            &-navbar 
+                @apply flex justify-between items-center h-full
+                &-row 
+                    @apply flex items-center gap-x-4
+                    &-btn 
+                        @apply flex items-center justify-center gap-x-2
+                        svg 
+                            @apply shrink-0 size-5
+        &-collapse 
+            @apply fixed top-0 right-0 inset-0  z-20 overflow-y-auto 
+            &-main 
+                // @apply flex flex-col relative min-h-full z-30 bg-amber-50 after:bg-amber-50 after:absolute after:-right-full after:w-full after:inset-y-0 
+                @apply flex flex-col relative min-h-full z-30
+                &-navbar 
+                    @apply flex items-center justify-between min-h-16 sticky top-0 
+                    &-row 
+                        @apply flex items-center gap-x-4
+                        &-btn 
+                            @apply flex items-center justify-center gap-x-2 
+                            svg 
+                                @apply shrink-0 size-5
+                &-body 
+                    @apply min-h-full flex-1
+                    &-nav 
+                        @apply flex flex-wrap gap-4 py-8 *:after:content-['/'] *:after:ml-4 *:after:font-body *:last:after:hidden
+                        a.active 
+                            @apply text-primary after:text-black

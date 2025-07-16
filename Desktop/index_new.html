@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kapanlagi</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="assets/sass/libs/tailwind.min.css">
+    </head>
+    <body class="font-body">
+
+        <div class="masthead text-center">
+            <img src="https://place-hold.it/996x200" class="inline-block">
+        </div>
+        <!--header-->
+        <header class="header group" id="headerFixed"> 
+            <div class="container">
+
+                <div class="header-fixed transition group-[.stick]:fixed group-[.stick]:backdrop-blur-lg group-[.stick]:z-20 group-[.stick]:bg-white/70">
+                    <div class="header-fixed-navbar container">
+                        <h1 class="header-navbar-logo opacity-0 transition group-[.stick]:opacity-100 group-[.off]:opacity-100"><a href="#"><img src="assets/images/logo.png" alt="image" width="150" height="30" class="object-contain"></a></h1>
+                        <div class="header-fixed-navbar-row">
+                            <button class="header-fixed-navbar-row-btn font-head text-xl hover:text-primary" id="hamburgerBtn" data-target-open="headerCollapse" type="button">MENU</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="header-logoBig group-[.off]:hidden"><a href="#"><img src="assets/images/logo.png" alt="image" width="400" height="100" class="object-contain"></a></h1>
+
+                <div class="header-collapse translate-x-full transition duration-500 group bg-fourth" id="headerCollapse">
+                    <div class="header-collapse-main container">
+                        <div class="header-collapse-main-navbar bg-fourth">
+                            <a class="header-collapse-main-navbar-logo" href="#"><img src="assets/images/logo.png" alt="image" width="150" height="30" class="object-contain"></a>
+                            <div class="header-collapse-main-navbar-row">
+                                <button class="header-collapse-main-navbar-row-btn font-head text-xl" id="searchBtn" data-target-open="searchCollapse" type="button">
+                                    SEARCH
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.2378 21.0631L17.6845 15.5099L15.4622 17.7322L21.0154 23.2854L23.2378 21.0631Z" fill="currentColor"/>
+                                        <ellipse cx="10.6831" cy="10.5827" rx="8.68307" ry="8.68317" stroke="black" stroke-width="3"/>
+                                    </svg>
+                                </button>
+                                <button class="header-collapse-main-navbar-row-btn font-head text-xl" id="hamburgerBtnClose" data-target-close="headerCollapse" type="button">
+                                    CLOSE
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.68407 18.2886L18.2404 2.73223L16.0181 0.509889L0.461731 16.0662L2.68407 18.2886Z" fill="currentColor"/>
+                                        <path d="M18.2403 16.0663L2.68393 0.509905L0.461594 2.73224L16.0179 18.2886L18.2403 16.0663Z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="header-collapse-main-navbar-search absolute transition -translate-y-full flex items-center justify-between bg-fourth gap-x-2 inset-0 border-b" id="searchCollapse">
+                                <button type="submit" class="shrink-0" id="search-btnSubmit"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.2503 19.1365L13.6124 13.4986L12.2488 14.8621L17.8867 20.5L19.2503 19.1365Z" fill="currentColor"/>
+                                    <circle cx="8.4991" cy="8.9991" r="7.4991" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                                <input type="text" class="w-full border-0 outline-0 shadow-none" placeholder="Search on kapanlagi...">
+                                <button type="button" class="shrink-0" id="searchbBtnClose" data-target-close="searchCollapse"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.2714 20.2728L19.9993 7.54489L18.181 5.72661L5.45312 18.4545L7.2714 20.2728Z" fill="currentColor"/>
+                                    <path d="M19.9999 18.4545L7.27199 5.7266L5.45372 7.54488L18.1816 20.2728L19.9999 18.4545Z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="header-collapse-main-body">
+                            <div class="header-collapse-main-body-nav font-head text-4xl *:hover:text-primary *:hover:after:text-black">
+                                <a href="#" class="active">Home</a>
+                                <a href="#">Artis</a>
+                                <a href="#">Hollywood</a>
+                                <a href="#">Film</a>
+                                <a href="#">Musik</a>
+                                <a href="#">Dangdut</a>
+                                <a href="#">Korea</a>
+                                <a href="#">Jepang</a>
+                                <a href="#">Foto</a>
+                                <a href="#">Kuis</a>
+                                <a href="#">Plus</a>
+                                <a href="#">Trending</a>
+                                <a href="#">Video</a>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="footer-top font-head *:hover:text-primary">
+                                <a href="">Redaksi</a>
+                                <a href="">Disclaimer</a>
+                                <a href="">Kode Etik</a>
+                                <a href="">Provacy Policy</a>
+                                <a href="">Pedoman Media Siberi</a>
+                                <a href="">Sitemap</a>
+                            </div>
+                            <div class="footer-row ">
+                                <div class="footer-row-sites text-xs *:hover:underline">
+                                    <a href=""><img src="assets/images/fav-lip6.png" alt="favicon" width="16" height="16"> Liputan6.com</a>
+                                    <a href=""><img src="assets/images/fav-kl.png" alt="favicon" width="16" height="16"> Kapanlagi.com</a>
+                                    <a href=""><img src="assets/images/fav-bolanet.png" alt="favicon" width="16" height="16"> Bola.net</a>
+                                    <a href=""><img src="assets/images/fav-bolacom.png" alt="favicon" width="16" height="16"> Bola.com</a>
+                                    <a href=""><img src="assets/images/fav-merdeka.png" alt="favicon" width="16" height="16"> Merdeka.com</a>
+                                    <a href=""><img src="assets/images/fav-fimela.png" alt="favicon" width="16" height="16"> Fimela.com</a>
+                                    <a href=""><img src="assets/images/fav-dream.png" alt="favicon" width="16" height="16"> Dream.co.id</a>
+                                    <a href=""><img src="assets/images/fav-brilio.png" alt="favicon" width="16" height="16"> Brilio.net</a>
+                                    <a href=""><img src="assets/images/fav-trstdly.png" alt="favicon" width="16" height="16"> Trstdly.com</a>
+                                    <a href=""><img src="assets/images/fav-manissedap.png" alt="favicon" width="16" height="16"> Manisdansedap.com</a>
+                                </div>
+                                <div class="footer-row-connect">
+                                    <span class="font-head text-xs">Connect with Us</span>
+                                    <div class="footer-row-connect-list">
+                                        <a href=""><img src="assets/images/sosmed-wa.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-fb.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-x.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-ig.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-yt.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-tiktok.png" alt="sosmed" width="24" height="24"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="footer-copyright text-gray-400 text-xs font-medium">Copyright © 2025 Kapanlagi.com  KLY KapanLagi Youniverse All Right Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--end.header-->
+
+        <!--main-->
+        <main class="main">
+
+            <!--section.headline-->
+            <section class="section section--headline">
+                <span class="section-bgBlur bg-third"></span>
+                <div class="container">
+                    <div class="grid3Cols">
+                        <div class="grid3Cols-2">
+                            <div class="item25">
+                                <div class="item25-image aspect-square">
+                                    <a href=""><img src="assets/images/headline-1.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                </div>
+                                <div class="item25-desc">
+                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                    <p class="item25-desc-title font-head text-2xl hover:text-primary">
+                                        <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid3Cols-1">
+                            <div class="grid4Rows">
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid3Cols-2">
+                            <div class="grid2Rows">
+                                <div class="grid2Rows-2">
+                                    <div class="item25">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-head text-xl hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                        <div class="item25-image aspect-[2/1]">
+                                            <a href=""><img src="assets/images/headline-2.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid2Rows-1">
+                                    <div class="item25 item25--row">
+                                        <div class="item25-image aspect-square w-1/2">
+                                            <a href=""><img src="assets/images/headline-3.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold hover:text-primary">
+                                                <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--end.section.headline-->
+
+            <div class="ads ads--leaderboard">
+                <span class="ads-title bg-neutral-200 text-neutral-500">Iklan</span>
+                <a href="#">
+                    <img src="assets/images/leaderboard.png" width="640" height="80" alt="">
+                </a>
+            </div>
+
+            <!--section.video-->
+            <section class="section section--bg section--video bg-fourth">
+                <div class="container">
+                    <div class="section-titleWlink">
+                        <span class="section-titleWlink-title font-head text-5xl">VIDEO</span>
+                        <a href="" class="section-titleWlink-link font-head hover:underline">ALL VIDEO
+                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1649 4.69529C13.0909 4.69529 11.2007 2.90883 11.2007 0.945336V0.140625H9.49931V0.945336C9.49931 2.37289 10.1611 3.71193 11.1998 4.69529H0.703125V6.30471H11.1998C10.1611 7.28807 9.49931 8.62711 9.49931 10.0547V10.8594H11.2007V10.0547C11.2007 8.09197 13.0909 6.30471 15.1649 6.30471H16.0156V4.69529H15.1649Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="grid2Cols">
+                        <div class="grid2Cols-item">
+                            <div class="item25">
+                                <div class="item25-image aspect-video">
+                                    <iframe class="vidio-embed" src="https://www.vidio.com/live/205-indosiar/embed?autoplay=true&player_only=true&mute=true" width="560" height="317" scrolling="no" frameborder="0" allowfullscreen allow="encrypted-media *;"></iframe>
+                                    <!-- <img src="https://place-hold.it/600x338" width="600" height="338" class="object-cover w-full" alt="image"> -->
+                                </div>
+                                <div class="item25-desc">
+                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                    <p class="item25-desc-title font-head text-2xl hover:text-primary">
+                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid2Cols-3Rows">
+                            <div class="item25 item25--row">
+                                <div class="item25-desc">
+                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                    <p class="item25-desc-title font-bold hover:text-primary">
+                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                    </p>
+                                </div>
+                                <div class="item25-image aspect-video w-1/3 relative">
+                                    <img class="item25-icon absolute inset-0 m-auto z-10 pointer-events-none" src="assets/images/play.png" width="36" height="36" alt="">
+                                    <a href=""><img src="assets/images/thumbs.png" width="178" height="100" class="object-cover w-full" alt="image"></a>
+                                </div>
+                            </div>
+                            <div class="item25 item25--row">
+                                <div class="item25-desc">
+                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                    <p class="item25-desc-title font-bold hover:text-primary">
+                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                    </p>
+                                </div>
+                                <div class="item25-image aspect-video w-1/3 relative">
+                                    <img class="item25-icon absolute inset-0 m-auto z-10 pointer-events-none" src="assets/images/play.png" width="36" height="36" alt="">
+                                    <a href=""><img src="assets/images/thumbs.png" width="178" height="100" class="object-cover w-full" alt="image"></a>
+                                </div>
+                            </div>
+                            <div class="item25 item25--row">
+                                <div class="item25-desc">
+                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                    <p class="item25-desc-title font-bold hover:text-primary">
+                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                    </p>
+                                </div>
+                                <div class="item25-image aspect-video w-1/3 relative">
+                                    <img class="item25-icon absolute inset-0 m-auto z-10 pointer-events-none" src="assets/images/play.png" width="36" height="36" alt="">
+                                    <a href=""><img src="assets/images/thumbs.png" width="178" height="100" class="object-cover w-full" alt="image"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--.section.video-->
+
+            <!--section.gridWaside-->
+            <section class="section section--tab25 section--gridWaside">
+                <div class="container">
+                    <div class="section--gridWaside-row">
+                        <div class="section--gridWaside-row-main">
+                            <div class="tab25">
+                                <div class="tab25-nav font-head text-xl">
+                                    <a href="#" class="bg-third tab25-nav-btn active" data-tab="seleb" style="--marqueeDuration:2s">
+                                        <span class="text-white">Selebrity</span>
+                                        <span>Selebrity</span>
+                                        <span class="text-white">Selebrity</span>
+                                        <span>Selebrity</span>
+                                        <span class="text-white">Selebrity</span>
+                                        <span>Selebrity</span>
+                                    </a>
+                                    <a href="#" class="bg-primary tab25-nav-btn" data-tab="film" style="--marqueeDuration:2s">
+                                        <span class="text-white">Film</span>
+                                        <span>Film</span>
+                                        <span class="text-white">Film</span>
+                                        <span>Film</span>
+                                        <span class="text-white">Film</span>
+                                        <span>Film</span>
+                                        <span class="text-white">Film</span>
+                                        <span>Film</span>
+                                        <span class="text-white">Film</span>
+                                        <span>Film</span>
+                                    </a>
+                                    <a href="#" class="bg-secondary tab25-nav-btn" data-tab="music" style="--marqueeDuration:2s">
+                                        <span class="text-white">Music</span>
+                                        <span>Music</span>
+                                        <span class="text-white">Music</span>
+                                        <span>Music</span>
+                                        <span class="text-white">Music</span>
+                                        <span>Music</span>
+                                        <span class="text-white">Music</span>
+                                        <span>Music</span>
+                                    </a>
+                                </div>
+                                <div class="tab25-content">
+                                    <div id="seleb" class="tab25-content-item bg-third active">
+                                        <span class="tab25-content-item-title font-head text-7xl">THE A LIST</span>
+                                        <div class="tab25-content-item-article">
+                                            <div class="tab25-content-item-article-item">
+                                                <div class="item25 item25--row">
+                                                    <div class="item25-image shrink-0 aspect-square w-1/3">
+                                                        <a href=""><img src="assets/images/tabs.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                                    </div>
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-xl font-head font-bold hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab25-content-item-article-grid3Rows">
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="section-btnEnd">
+                                            <a href="" class="section-btnEnd-link font-head hover:underline">Selengkapnya 
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0892 5.1529C13.0179 5.1529 11.1302 3.3688 11.1302 1.4079V0.604248H9.43105V1.4079C9.43105 2.83357 10.092 4.17084 11.1293 5.1529H0.646484V6.7602H11.1293C10.092 7.74225 9.43105 9.07952 9.43105 10.5052V11.3088H11.1302V10.5052C11.1302 8.5451 13.0179 6.7602 15.0892 6.7602H15.9388V5.1529H15.0892Z" fill="currentColor"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="film" class="tab25-content-item bg-primary">
+                                        <span class="tab25-content-item-title font-head text-7xl">THE A LIST</span>
+                                        <div class="tab25-content-item-article">
+                                            <div class="tab25-content-item-article-item">
+                                                <div class="item25 item25--row">
+                                                    <div class="item25-image shrink-0 aspect-square w-1/3">
+                                                        <a href=""><img src="assets/images/tabs.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                                    </div>
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-xl font-head font-bold hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab25-content-item-article-grid3Rows">
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="section-btnEnd">
+                                            <a href="" class="section-btnEnd-link font-head hover:underline">Selengkapnya 
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0892 5.1529C13.0179 5.1529 11.1302 3.3688 11.1302 1.4079V0.604248H9.43105V1.4079C9.43105 2.83357 10.092 4.17084 11.1293 5.1529H0.646484V6.7602H11.1293C10.092 7.74225 9.43105 9.07952 9.43105 10.5052V11.3088H11.1302V10.5052C11.1302 8.5451 13.0179 6.7602 15.0892 6.7602H15.9388V5.1529H15.0892Z" fill="currentColor"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="music" class="tab25-content-item bg-secondary">
+                                        <span class="tab25-content-item-title font-head text-7xl">THE A LIST</span>
+                                        <div class="tab25-content-item-article">
+                                            <div class="tab25-content-item-article-item">
+                                                <div class="item25 item25--row">
+                                                    <div class="item25-image shrink-0 aspect-square w-1/3">
+                                                        <a href=""><img src="assets/images/tabs.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                                    </div>
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-xl font-head font-bold hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab25-content-item-article-grid3Rows">
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="item25">
+                                                    <div class="item25-desc">
+                                                        <a href="" class="item25-desc-tag text-xs hover:underline">Artis</a>
+                                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:underline">
+                                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="section-btnEnd">
+                                            <a href="" class="section-btnEnd-link font-head hover:underline">Selengkapnya 
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0892 5.1529C13.0179 5.1529 11.1302 3.3688 11.1302 1.4079V0.604248H9.43105V1.4079C9.43105 2.83357 10.092 4.17084 11.1293 5.1529H0.646484V6.7602H11.1293C10.092 7.74225 9.43105 9.07952 9.43105 10.5052V11.3088H11.1302V10.5052C11.1302 8.5451 13.0179 6.7602 15.0892 6.7602H15.9388V5.1529H15.0892Z" fill="currentColor"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section--gridWaside-row-aside w-[300px]">
+                            <div class="ads ads--halfpage">
+                                <span class="ads-title bg-neutral-200 text-neutral-500">Iklan</span>
+                                <a href="#">
+                                    <img src="assets/images/halfpage.png" width="300" height="600" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section.trending -->
+            <section class="section section--trending">
+                <div class="container">
+                    <div class="marquee marquee--title text-7xl font-head" style="--marqueeDuration:60s">
+                        <ul class="marquee__list">
+                            <li class="marquee__list__item">TRENDING</li>
+                            <li class="marquee__list__item text-third">TRENDING</li>
+                            <li class="marquee__list__item text-secondary">TRENDING</li>
+                            <li class="marquee__list__item">TRENDING</li>
+                            <li class="marquee__list__item text-third">TRENDING</li>
+                            <li class="marquee__list__item text-secondary">TRENDING</li>
+                        </ul>
+                        <ul class="marquee__list">
+                            <li class="marquee__list__item">TRENDING</li>
+                            <li class="marquee__list__item text-third">TRENDING</li>
+                            <li class="marquee__list__item text-secondary">TRENDING</li>
+                            <li class="marquee__list__item">TRENDING</li>
+                            <li class="marquee__list__item text-third">TRENDING</li>
+                            <li class="marquee__list__item text-secondary">TRENDING</li>
+                        </ul>
+                    </div>
+                    <div class="section--trending-wrapper">
+                        <div class="marquee --reversed" style="--marqueeDuration:30s;">
+                            <ul class="marquee__list">
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="marquee__list">
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="marquee" style="--marqueeDuration:30s;--marqueeDelay:.5s">
+                            <ul class="marquee__list">
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="marquee__list">
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="marquee --reversed" style="--marqueeDuration:30s;--marqueeDelay:1s">
+                            <ul class="marquee__list">
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="marquee__list">
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="marquee__list__item">
+                                    <div class="item25 item25--trending">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold line-clamp-2 hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--section.kapanlagi-show-->
+            <section class="section section--bg section--slide25 bg-fifth text-white">
+                <div class="container">
+                    <div class="section--slide25-row">
+                        <span class="section--slide25-title writingModeSideway font-head text-7xl">KAPANLAGI <br>SHOW</span>
+                        <div class="swiper section--slide25-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-2.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-3.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-1.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-2.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-3.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-1.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-2.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <a href=""><img src="assets/images/show-3.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-navigation text-white font-head">
+                                <div class="swiper-scrollbar bg-white/50!"></div>
+                                <div class="swiper-button-prev">
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.11111 8.05105C3.82 8.05105 6.28889 10.3844 6.28889 12.949L6.28889 14L8.51111 14L8.51111 12.9489C8.51111 11.0844 7.64667 9.33544 6.29 8.05105L20 8.05105L20 5.94895L6.29 5.94895C7.64667 4.66457 8.51111 2.91562 8.51111 1.05105L8.51111 1.00439e-06L6.28889 1.19866e-06L6.28889 1.05105C6.28889 3.61457 3.82 5.94895 1.11111 5.94895L-1.01999e-07 5.94895L8.17722e-08 8.05105L1.11111 8.05105Z" fill="currentColor"/></svg>
+                                    <span>PREV</span>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <span>NEXT</span>
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.8889 5.94895C16.18 5.94895 13.7111 3.61562 13.7111 1.05105V0H11.4889V1.05105C11.4889 2.91562 12.3533 4.66456 13.71 5.94895H0V8.05105H13.71C12.3533 9.33544 11.4889 11.0844 11.4889 12.9489V14H13.7111V12.9489C13.7111 10.3854 16.18 8.05105 18.8889 8.05105H20V5.94895H18.8889Z" fill="currentColor"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--end.section.kapanlagi-show-->
+
+            <!--section.korea-->
+            <section class="section section--korea">
+                <span class="section-bgBlur bg-secondary"></span>
+                <div class="container">
+                    <div class="section-title justify-end">
+                        <span class="section-title-text text-secondary font-head text-7xl">KOREA</span>
+                    </div>
+                    <div class="grid3Cols">
+                        <div class="grid3Cols-1">
+                            <div class="grid4Rows">
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid3Cols-2">
+                            <div class="item25">
+                                <div class="item25-image aspect-square">
+                                    <a href=""><img src="assets/images/korea-1.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                </div>
+                                <div class="item25-desc">
+                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                    <p class="item25-desc-title font-head text-2xl hover:text-primary">
+                                        <a href="">Tsania Marwa Lulus Sidang Skripsi S2, Sebut Hak Asuh Anak Pada Judul Tesis</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid3Cols-2">
+                            <div class="grid2Rows">
+                                <div class="grid2Rows-1">
+                                    <div class="item25 item25--row">
+                                        <div class="item25-image aspect-square w-1/2">
+                                            <a href=""><img src="assets/images/korea-2.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold hover:text-primary">
+                                                <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid2Rows-2">
+                                    <div class="item25">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-head text-xl hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                        <div class="item25-image aspect-[2/1]">
+                                            <a href=""><img src="assets/images/korea-3.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--end.section.korea-->
+
+            <!--section.featured-video-->
+            <section class="section section--bg section--slide25 bg-fifth text-white">
+                <div class="container">
+                    <div class="section--slide25-row">
+                        <span class="section--slide25-title writingModeSideway font-head text-7xl">FEATURED <br>VIDEO</span>
+                        <div class="swiper section--slide25-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-1.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-2.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-3.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-4.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-1.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-2.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-3.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="item25 aspect-[9/16] relative">
+                                        <img class="item25-icon absolute inset-0 m-auto z-10" src="assets/images/play.png" width="48" height="48" alt="">
+                                        <img class="item25-image" src="assets/images/video-4.png" width="183" height="324" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-navigation text-white font-head">
+                                <div class="swiper-scrollbar bg-white/50!"></div>
+                                <div class="swiper-button-prev">
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.11111 8.05105C3.82 8.05105 6.28889 10.3844 6.28889 12.949L6.28889 14L8.51111 14L8.51111 12.9489C8.51111 11.0844 7.64667 9.33544 6.29 8.05105L20 8.05105L20 5.94895L6.29 5.94895C7.64667 4.66457 8.51111 2.91562 8.51111 1.05105L8.51111 1.00439e-06L6.28889 1.19866e-06L6.28889 1.05105C6.28889 3.61457 3.82 5.94895 1.11111 5.94895L-1.01999e-07 5.94895L8.17722e-08 8.05105L1.11111 8.05105Z" fill="currentColor"/></svg>
+                                    <span>PREV</span>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <span>NEXT</span>
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.8889 5.94895C16.18 5.94895 13.7111 3.61562 13.7111 1.05105V0H11.4889V1.05105C11.4889 2.91562 12.3533 4.66456 13.71 5.94895H0V8.05105H13.71C12.3533 9.33544 11.4889 11.0844 11.4889 12.9489V14H13.7111V12.9489C13.7111 10.3854 16.18 8.05105 18.8889 8.05105H20V5.94895H18.8889Z" fill="currentColor"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--end.section.featured-video-->
+
+            <!--section.roundatable-->
+            <section class="section section--roundtable">
+                <span class="section-bgBlur bg-third"></span>
+                <div class="container">
+                    <div class="section-title justify-start">
+                        <span class="section-title-text text-primary font-head text-7xl">ROUNDATABLE</span>
+                    </div>
+                    <div class="grid3Cols">
+                        <div class="grid3Cols-2">
+                            <div class="item25">
+                                <div class="item25-image aspect-square">
+                                    <a href=""><img src="assets/images/roundtable-1.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                </div>
+                                <div class="item25-desc">
+                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                    <p class="item25-desc-title font-head text-2xl hover:text-primary">
+                                        <a href="">Tsania Marwa Lulus Sidang Skripsi S2, Sebut Hak Asuh Anak Pada Judul Tesis</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid3Cols-2">
+                            <div class="grid2Rows">
+                                <div class="grid2Rows-1">
+                                    <div class="item25 item25--row">
+                                        <div class="item25-image aspect-square w-1/2">
+                                            <a href=""><img src="assets/images/roundtable-2.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title text-sm font-bold hover:text-primary">
+                                                <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid2Rows-2">
+                                    <div class="item25">
+                                        <div class="item25-desc">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-head text-xl hover:text-primary">
+                                                <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                            </p>
+                                        </div>
+                                        <div class="item25-image aspect-[2/1]">
+                                            <a href=""><img src="assets/images/roundtable-3.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid3Cols-1">
+                            <div class="grid4Rows">
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item25">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title text-sm font-bold line-clamp-4 hover:text-primary">
+                                            <a href="">Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--end.section.roundtable-->
+
+            <!--section.galeri.foto-->
+            <section class="section section--bg section--slide25 bg-fifth text-white">
+                <div class="container">
+                    <div class="section--slide25-row">
+                        <span class="section--slide25-title writingModeSideway font-head text-7xl">GALERI <br>FOTO</span>
+                        <div class="swiper section--slide25-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-1.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-2.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-3.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-4.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-2.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-3.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-1.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item25">
+                                        <div class="item25-image aspect-[180/226]">
+                                            <span class="item25-count bg-neutral-800/70 text-white pointer-events-none">
+                                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4612 2.62988H5.31836C5.19996 2.62988 5.08641 2.67692 5.00269 2.76064C4.91897 2.84436 4.87193 2.95791 4.87193 3.07631V5.30845H2.63979C2.52139 5.30845 2.40784 5.35549 2.32412 5.43921C2.24039 5.52293 2.19336 5.63648 2.19336 5.75488V12.8977C2.19336 13.0161 2.24039 13.1297 2.32412 13.2134C2.40784 13.2971 2.52139 13.3442 2.63979 13.3442H9.78265C9.90105 13.3442 10.0146 13.2971 10.0983 13.2134C10.182 13.1297 10.2291 13.0161 10.2291 12.8977V10.6656H12.4612C12.5796 10.6656 12.6932 10.6186 12.7769 10.5348C12.8606 10.4511 12.9076 10.3376 12.9076 10.2192V3.07631C12.9076 2.95791 12.8606 2.84436 12.7769 2.76064C12.6932 2.67692 12.5796 2.62988 12.4612 2.62988ZM9.33622 12.4513H3.08622V6.20131H9.33622V12.4513ZM12.0148 9.77274H10.2291V5.75488C10.2291 5.63648 10.182 5.52293 10.0983 5.43921C10.0146 5.35549 9.90105 5.30845 9.78265 5.30845H5.76479V3.52274H12.0148V9.77274Z" fill="currentColor"/></svg>
+                                                <span>4 Foto</span>
+                                            </span>
+                                            <a href=""><img src="assets/images/foto-4.png" width="300" height="300" class="object-cover w-full" alt="image"></a>
+                                        </div>
+                                        <div class="item25-desc border-white">
+                                            <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                            <p class="item25-desc-title font-bold line-clamp-4 hover:underline">
+                                                <a href="">10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal 10 Drama Korea yang Dibintangi Choi Jung Woo Sebelum Meninggal</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-navigation text-white font-head">
+                                <div class="swiper-scrollbar bg-white/50!"></div>
+                                <div class="swiper-button-prev">
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.11111 8.05105C3.82 8.05105 6.28889 10.3844 6.28889 12.949L6.28889 14L8.51111 14L8.51111 12.9489C8.51111 11.0844 7.64667 9.33544 6.29 8.05105L20 8.05105L20 5.94895L6.29 5.94895C7.64667 4.66457 8.51111 2.91562 8.51111 1.05105L8.51111 1.00439e-06L6.28889 1.19866e-06L6.28889 1.05105C6.28889 3.61457 3.82 5.94895 1.11111 5.94895L-1.01999e-07 5.94895L8.17722e-08 8.05105L1.11111 8.05105Z" fill="currentColor"/></svg>
+                                    <span>PREV</span>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <span>NEXT</span>
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.8889 5.94895C16.18 5.94895 13.7111 3.61562 13.7111 1.05105V0H11.4889V1.05105C11.4889 2.91562 12.3533 4.66456 13.71 5.94895H0V8.05105H13.71C12.3533 9.33544 11.4889 11.0844 11.4889 12.9489V14H13.7111V12.9489C13.7111 10.3854 16.18 8.05105 18.8889 8.05105H20V5.94895H18.8889Z" fill="currentColor"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--end.section.galeri.foto-->
+
+            <!--section.latest-->
+            <section class="section section--latest section--gridWaside">
+                <div class="container">
+                    <div class="section-title justify-end">
+                        <span class="section-title-text font-head text-7xl">LATEST UPDATE</span>
+                    </div>
+                    <div class="section--gridWaside-row">
+                        <div class="section--gridWaside-row-main">
+                            <div class="section--latest-col">
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-1.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-2.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-3.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-4.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-5.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-1.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-2.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-3.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-4.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="item25 item25--row">
+                                    <div class="item25-desc">
+                                        <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                        <p class="item25-desc-title font-bold hover:text-primary">
+                                            <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                        </p>
+                                    </div>
+                                    <div class="item25-image aspect-video w-1/3">
+                                        <a href=""><img src="assets/images/latest-5.png" width="300" height="150" class="object-cover w-full" alt="image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn--border font-bold text-sm transition-colors hover:bg-black hover:text-white">Berita Selanjutnya</a>
+                        </div>
+                        <div class="section--gridWaside-row-aside w-[300px]">
+                            <div class="ads ads--halfpage">
+                                <span class="ads-title bg-neutral-200 text-neutral-500">Iklan</span>
+                                <a href="#">
+                                    <img src="assets/images/halfpage.png" width="300" height="600" alt="">
+                                </a>
+                            </div>
+                            <div class="ads ads--showcase">
+                                <span class="ads-title bg-neutral-200 text-neutral-500">Iklan</span>
+                                <a href="#">
+                                    <img src="assets/images/showcase-1.png" width="300" height="250" alt="">
+                                </a>
+                            </div>
+                            <div class="ads ads--showcase">
+                                <span class="ads-title bg-neutral-200 text-neutral-500">Iklan</span>
+                                <a href="#">
+                                    <img src="assets/images/showcase-2.png" width="300" height="250" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!--end.main-->
+
+        <!--footer-->
+        <footer class="footer bg-fourth">
+            <div class="container">
+                <a class="footer-logo" href="#"><img src="assets/images/logo.png" alt="image" width="150" height="30" class="object-contain"></a>
+                <div class="footer-top font-head *:hover:text-primary">
+                    <a href="">Redaksi</a>
+                    <a href="">Disclaimer</a>
+                    <a href="">Kode Etik</a>
+                    <a href="">Provacy Policy</a>
+                    <a href="">Pedoman Media Siberi</a>
+                    <a href="">Sitemap</a>
+                </div>
+                <div class="footer-row">
+                    <div class="footer-row-sites text-xs *:hover:underline">
+                        <a href=""><img src="assets/images/fav-lip6.png" alt="favicon" width="16" height="16"> Liputan6.com</a>
+                        <a href=""><img src="assets/images/fav-kl.png" alt="favicon" width="16" height="16"> Kapanlagi.com</a>
+                        <a href=""><img src="assets/images/fav-bolanet.png" alt="favicon" width="16" height="16"> Bola.net</a>
+                        <a href=""><img src="assets/images/fav-bolacom.png" alt="favicon" width="16" height="16"> Bola.com</a>
+                        <a href=""><img src="assets/images/fav-merdeka.png" alt="favicon" width="16" height="16"> Merdeka.com</a>
+                        <a href=""><img src="assets/images/fav-fimela.png" alt="favicon" width="16" height="16"> Fimela.com</a>
+                        <a href=""><img src="assets/images/fav-dream.png" alt="favicon" width="16" height="16"> Dream.co.id</a>
+                        <a href=""><img src="assets/images/fav-brilio.png" alt="favicon" width="16" height="16"> Brilio.net</a>
+                        <a href=""><img src="assets/images/fav-trstdly.png" alt="favicon" width="16" height="16"> Trstdly.com</a>
+                        <a href=""><img src="assets/images/fav-manissedap.png" alt="favicon" width="16" height="16"> Manisdansedap.com</a>
+                    </div>
+                    <div class="footer-row-connect">
+                        <span class="font-head text-xs">Connect with Us</span>
+                        <div class="footer-row-connect-list">
+                            <a href=""><img src="assets/images/sosmed-wa.png" alt="sosmed" width="24" height="24"></a>
+                            <a href=""><img src="assets/images/sosmed-fb.png" alt="sosmed" width="24" height="24"></a>
+                            <a href=""><img src="assets/images/sosmed-x.png" alt="sosmed" width="24" height="24"></a>
+                            <a href=""><img src="assets/images/sosmed-ig.png" alt="sosmed" width="24" height="24"></a>
+                            <a href=""><img src="assets/images/sosmed-yt.png" alt="sosmed" width="24" height="24"></a>
+                            <a href=""><img src="assets/images/sosmed-tiktok.png" alt="sosmed" width="24" height="24"></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer-copyright text-gray-400 text-xs font-medium">Copyright © 2025 Kapanlagi.com  KLY KapanLagi Youniverse All Right Reserved.</p>
+            </div>
+        </footer>
+        <!--end.footer-->
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="//static-web.prod.vidiocdn.com/assets/javascripts/vidio-embed.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            window.addEventListener('load', () => {
+
+                document.querySelectorAll('.tab25-nav-btn').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const tabId = button.getAttribute('data-tab');
+
+                        // Remove active class from all buttons and contents
+                        document.querySelectorAll('.tab25-nav-btn').forEach(btn => btn.classList.remove('active'));
+                        document.querySelectorAll('.tab25-content-item').forEach(tab => tab.classList.remove('active'));
+
+                        // Add active class to clicked button and corresponding content
+                        button.classList.add('active');
+                        document.getElementById(tabId).classList.add('active');
+
+                        e.preventDefault()
+                    });
+                });
+
+                document.querySelectorAll('.section--slide25').forEach(container => {
+                    const videoSwiper = new Swiper(container.querySelector('.section--slide25-swiper'), {
+                        slidesPerView: 'auto',
+                        spaceBetween: 24,
+                        // loop: 'true',
+                        scrollbar: {
+                            el: ".swiper-scrollbar",
+                            // hide: true,
+                        },
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        navigation: {
+                            nextEl: container.querySelector('.swiper-button-next'),
+                            prevEl: container.querySelector('.swiper-button-prev'),
+                        },
+                    });
+                });
+            });
+
+        </script>
+    </body>
+</html>

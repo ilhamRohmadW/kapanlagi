@@ -1,0 +1,96 @@
+@theme {
+  --color-primary: #F08C00;
+  --color-secondary: #EC2A80;
+  --color-third: #FFC71A;
+  --color-fourth: #FFF9E8;
+  --color-fifth: #1E1E1E;
+  --font-head: 'Anton', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --inset-shadow-md: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+@layer base {
+  html, body {
+    @apply overflow-x-hidden {}
+  }
+  button {
+    @apply cursor-pointer {}
+  }
+}
+
+@layer utilities {
+  .container25 {
+    @apply max-w-full mx-auto px-4 relative {}
+  }
+  .hideScrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hideScrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .writingModeSideway {
+    @apply whitespace-nowrap -rotate-90 inline-block absolute origin-bottom-left bottom-0 left-1/2 translate-x-[24px] translate-y-[-24px] {}
+  }
+  .open {
+    @apply translate-0 opacity-100 pointer-events-auto {}
+  }
+  .header25-fixed-navbar,
+  .header25-logoBig,
+  .main25 {
+    @apply transition duration-500 {}
+  }
+  .expand .main25,
+  .expand .header25-fixed-navbar,
+  .expand .header25-logoBig {
+    @apply opacity-50 -translate-x-56 {}
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@layer components {
+  .ads {
+    @apply mb-8 w-fit mx-auto {}
+  }
+  .ads-title {
+    @apply text-xs py-2 block text-center {}
+  }
+  .btn25--border {
+    @apply border block p-4 max-w-64 text-center mx-auto {}
+  }
+  .tab25-nav {
+    @apply flex *:flex-1 *:flex *:items-center *:relative {}
+  }
+  .tab25-content-item {
+    display: none;
+  }
+  .tab25-content-item.active {
+    display: block;
+  }
+  .marquee {
+    @apply overflow-hidden flex items-center pb-6 {}
+  }
+  .marquee--title {
+    @apply overflow-hidden flex items-center border-t py-8 {}
+  }
+  .marquee__list {
+    @apply flex items-center gap-6 px-3 {}    animation-name: marquee;
+    animation-duration: var(--marqueeDuration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: var(--marqueeDelay);
+  }
+  .marquee.--reversed .marquee__list {
+    animation-direction: reverse;
+  }
+  .btn--PDownSection {
+    @apply absolute right-5 bottom-9 z-10 animate-bounce {}
+  }
+}

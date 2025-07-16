@@ -1,0 +1,153 @@
+.section--slide25 .swiper {
+  @apply mt-8 -mx-4 px-4 {}  --swiper-scrollbar-drag-bg-color: white;
+  --swiper-theme-color: white;
+}
+
+.section--slide25 .swiper-scrollbar {
+  @apply relative w-full bottom-0 left-0 {}
+}
+
+.section--slide25 .swiper-navigation {
+  @apply flex items-center justify-end gap-4 h-4 mt-11 {}
+}
+
+.section--slide25 .swiper-navigation .swiper-button-prev,
+.section--slide25 .swiper-navigation .swiper-button-next {
+  @apply relative after:hidden h-4 mt-0 inset-0 w-auto flex items-center gap-2 outline-none {}
+}
+
+.section--slide25 .swiper-navigation .swiper-button-prev svg,
+.section--slide25 .swiper-navigation .swiper-button-next svg {
+  @apply w-5 {}
+}
+
+.section--slide25 .swiper-slide {
+  @apply w-45 {}
+}
+
+.section--slide25 .swiper-slide .item25-desc {
+  @apply border-l-2 pl-4 {}
+}
+
+@layer components {
+  .item25 {
+    @apply flex flex-col gap-4 {}
+  }
+  .item25--row {
+    @apply flex-row items-center {}
+  }
+  .item25--row .item25-desc {
+    @apply flex-1 {}
+  }
+  .item25--row .item25-image {
+    @apply shrink-0 {}
+  }
+  .item25--trending {
+    @apply min-w-96 {}
+  }
+  .item25-image {
+    @apply relative {}
+  }
+  .item25-count {
+    @apply flex items-center gap-1 p-1 absolute right-0 bottom-0 text-sm {}
+  }
+  .item25--photo .item25-image {
+    @apply overflow-hidden {}
+  }
+  .grid3Cols {
+    @apply grid grid-cols-1 gap-4 {}
+  }
+  .grid3Cols-2:first-child .grid2Rows {
+    @apply border-b pb-4 *:first:border-0 *:first:pt-0 {}
+  }
+  .grid3Cols .grid2Rows {
+    @apply grid grid-cols-1 gap-4 *:pt-4 *:border-t {}
+  }
+  .grid3Cols .grid4Rows {
+    @apply flex overflow-x-auto -mx-4 px-4 gap-4 *:py-4 *:border-t *:w-64 *:shrink-0 {}
+  }
+  .grid2Cols {
+    @apply grid grid-cols-1 gap-4 {}
+  }
+  .grid2Cols-3Rows {
+    @apply grid grid-cols-1 *:py-4 *:border-t {}
+  }
+  .main25 {
+    @apply space-y-10 pb-20 {}
+  }
+  .section {
+    @apply relative {}
+  }
+  .section--bg {
+    @apply py-8 {}
+  }
+  .section-title {
+    @apply flex items-center mb-8 border-b pb-4 {}
+  }
+  .section-titleWlink {
+    @apply flex items-center justify-between mb-4 {}
+  }
+  .section-titleWlink-link {
+    @apply flex items-center gap-x-2 {}
+  }
+  .section-titleWlink-link svg {
+    @apply shrink-0 size-5 {}
+  }
+  .section-btnEnd {
+    @apply flex justify-end mt-4 {}
+  }
+  .section-btnEnd-link {
+    @apply flex tracking-wide items-center gap-x-2 {}
+  }
+  .section-btnEnd-link svg {
+    @apply shrink-0 size-5 {}
+  }
+  .section-bgBlur {
+    @apply absolute h-30 z-0 w-full rotate-20 inset-0 m-auto rounded-[50%] opacity-20 blur-[10px] {}
+  }
+  .section--gridWaside-row {
+    @apply flex justify-between gap-8 {}
+  }
+  .section--gridWaside-row-main {
+    @apply flex-1 {}
+  }
+  .section--video .vidio-embed {
+    @apply -m-[5px] w-[calc(100%+10px)] h-[calc(100%+10px)] {}
+  }
+  .section--trending {
+    @apply -mx-4 {}
+  }
+  .section--trending-wrapper {
+    @apply flex flex-col gap-6 pt-6 border-y divide-y relative {}
+  }
+  .section--trending-wrapper .marquee__list__item {
+    @apply border-l pl-4 {}
+  }
+  .section--latest-col {
+    @apply flex flex-col divide-y *:py-4 -mt-4 border-b mb-10 {}
+  }
+  .section--search-form {
+    @apply my-4 {}
+  }
+  .section--search-form-group {
+    @apply flex items-center justify-between gap-x-2 inset-0 border-b {}
+  }
+  .tab25--cat {
+    @apply -mx-4 {}
+  }
+  .tab25--cat .tab25-nav {
+    @apply *:p-4 -mb-0.5 *:min-h-44 flex uppercase {}
+  }
+  .tab25--cat .tab25-content-item {
+    @apply py-12 px-4 {}
+  }
+  .tab25--cat .tab25-content-item-title {
+    @apply block mb-4 {}
+  }
+  .tab25--cat .tab25-content-item-article {
+    @apply flex flex-col gap-4 {}
+  }
+  .tab25--cat .tab25-content-item-article-grid3Rows {
+    @apply grid grid-cols-1 *:border-t *:py-4 {}
+  }
+}

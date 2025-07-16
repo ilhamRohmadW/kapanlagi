@@ -1,0 +1,122 @@
+@theme {
+  --color-primary: #F08C00;
+  --color-secondary: #EC2A80;
+  --color-third: #FFC71A;
+  --color-fourth: #FFF9E8;
+  --color-fifth: #1E1E1E;
+  --font-head: 'Anton', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --inset-shadow-md: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+@layer base {
+  html {
+    @apply overflow-x-hidden {}
+  }
+  button {
+    @apply cursor-pointer {}
+  }
+  img, iframe {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@layer utilities {
+  .container25 {
+    @apply relative max-w-[996px] mx-auto px-4 {}
+  }
+  .hideScrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hideScrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .open {
+    @apply translate-0 opacity-100 pointer-events-auto {}
+  }
+  .writingModeSideway {
+    @apply whitespace-nowrap -rotate-90 inline-block absolute origin-top-left top-0 left-0 transform-[translateX(-100%)] {}
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes tabMarquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+}
+
+@layer components {
+  .ads {
+    @apply mb-8 w-fit mx-auto {}
+  }
+  .ads-title {
+    @apply text-xs py-2 block text-center {}
+  }
+  .ads--masthead {
+    @apply mb-0 {}
+  }
+  .btn--border {
+    @apply border block p-4 max-w-64 text-center mx-auto {}
+  }
+  .marquee {
+    @apply border-t py-8 overflow-hidden flex items-center pb-6 last:border-b {}
+  }
+  .marquee:has(.item25):hover .marquee__list {
+    animation-play-state: paused;
+  }
+  .marquee__list {
+    @apply flex items-center gap-6 px-3 {}    animation-name: marquee;
+    animation-duration: var(--marqueeDuration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: var(--marqueeDelay);
+  }
+  .marquee.--reversed .marquee__list {
+    animation-direction: reverse;
+  }
+  .tab25-nav {
+    @apply *:flex-1 flex items-center *:flex *:items-center *:justify-center *:text-center *:overflow-hidden {}
+  }
+  .tab25-nav-btn {
+    @apply *:pointer-events-none *:px-0.5 {}    @apply *:hidden *:nth-[2]:block {}
+  }
+  .tab25-nav-btn:hover {
+    @apply *:block {}
+  }
+  .tab25-nav-btn:hover span {
+    animation-name: tabMarquee;
+    animation-duration: var(--marqueeDuration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .tab25-nav-btn.active {
+    @apply *:hidden *:nth-[2]:block justify-center {}
+  }
+  .tab25-nav-btn.active:hover {
+    @apply *:hidden *:nth-[2]:block {}
+  }
+  .tab25-nav-btn.active:hover span {
+    animation: none;
+  }
+  .tab25-content-item {
+    display: none;
+  }
+  .tab25-content-item.active {
+    display: block;
+  }
+  .btn--PDownSection {
+    @apply absolute right-10 bottom-14 z-10 animate-bounce {}
+  }
+}

@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "./components/theme.css";
+@import "./components/header.css";
+@import "./components/homepage.css";
+@import "./components/movie.css";
+@import "./components/footer.css";
