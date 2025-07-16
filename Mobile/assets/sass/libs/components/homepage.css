@@ -117,10 +117,10 @@
   .section--trending {
     @apply -mx-4 {}
   }
-  .section--trending-wrapper {
+  .section--trending-list {
     @apply flex flex-col gap-6 pt-6 border-y divide-y relative {}
   }
-  .section--trending-wrapper .marquee__list__item {
+  .section--trending-list .marquee__list__item {
     @apply border-l pl-4 {}
   }
   .section--latest-col {
