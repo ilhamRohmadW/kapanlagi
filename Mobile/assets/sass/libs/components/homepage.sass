@@ -14,7 +14,7 @@
                 svg
                     @apply w-5
         &-slide
-            @apply w-45
+            @apply w-46
             .item25-desc
                 @apply border-l-2 pl-4
 
@@ -87,11 +87,12 @@
                 @apply -m-[5px] w-[calc(100%+10px)] h-[calc(100%+10px)]
         
         &--trending
-            @apply -mx-4
+            .marquee
+                @apply -mx-4 after:border-black after:pointer-events-none after:border-t after:absolute after:inset-y-0 after:inset-x-4 last:after:border-b 
             &-list
-                @apply flex flex-col gap-6 pt-6 border-y divide-y relative
                 .marquee__list__item
                     @apply border-l pl-4
+                    
         &--latest
             &-col
                 @apply flex flex-col divide-y *:py-4 -mt-4 border-b mb-10
@@ -101,6 +102,8 @@
                 @apply my-4
                 &-group
                     @apply flex items-center justify-between gap-x-2 inset-0 border-b
+        &--headline
+            @apply mb-5
 
     .tab25--cat
         @apply -mx-4

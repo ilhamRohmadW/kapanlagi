@@ -71,7 +71,7 @@
     @apply border block p-4 max-w-64 text-center mx-auto {}
   }
   .marquee {
-    @apply border-t py-8 overflow-hidden flex items-center pb-6 last:border-b {}
+    @apply relative py-8 overflow-hidden flex items-center pb-6 {}
   }
   .marquee:has(.item25):hover .marquee__list {
     animation-play-state: paused;

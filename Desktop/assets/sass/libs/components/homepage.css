@@ -48,6 +48,9 @@
   .item25--row .item25-desc {
     @apply flex-1 {}
   }
+  .item25--row .item25-desc-title {
+    @apply mb-1 line-clamp-3 {}
+  }
   .item25--row .item25-image {
     @apply shrink-0 {}
   }
@@ -140,7 +143,7 @@
     @apply sticky top-0 *:last:mb-0 {}
   }
   .section--trending .marquee {
-    @apply -mx-4 {}
+    @apply -mx-4 after:border-black after:pointer-events-none after:border-t after:absolute after:inset-y-0 after:inset-x-4 last:after:border-b {}
   }
   .section--trending-list .marquee__list__item {
     @apply border-l pl-4 {}
@@ -153,6 +156,9 @@
   }
   .section--search-form-group {
     @apply flex items-center justify-between gap-x-2 inset-0 border-b {}
+  }
+  .section--headline .grid3Cols {
+    @apply pb-0 border-b-0 {}
   }
   .tab25--cat .tab25-nav {
     @apply *:inset-shadow-md uppercase *:min-h-14 {}

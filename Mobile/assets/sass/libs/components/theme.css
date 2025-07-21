@@ -62,6 +62,9 @@
   .ads-title {
     @apply text-xs py-2 block text-center {}
   }
+  .ads--leaderboard {
+    @apply mb-4 {}
+  }
   .btn25--border {
     @apply border block p-4 max-w-64 text-center mx-auto {}
   }
@@ -75,10 +78,10 @@
     display: block;
   }
   .marquee {
-    @apply overflow-hidden flex items-center pb-6 {}
+    @apply relative py-8 overflow-hidden flex items-center pb-6 {}
   }
-  .marquee--title {
-    @apply overflow-hidden flex items-center border-t py-8 {}
+  .marquee:has(.item25):hover .marquee__list {
+    animation-play-state: paused;
   }
   .marquee__list {
     @apply flex items-center gap-6 px-3 {}    animation-name: marquee;

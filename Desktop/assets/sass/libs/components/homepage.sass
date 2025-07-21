@@ -31,10 +31,14 @@
         @apply flex flex-col gap-4
         &--row 
             @apply flex-row items-center
-            .item25-desc
-                @apply flex-1
-            .item25-image
-                @apply shrink-0
+            .item25
+                &-desc
+                    @apply flex-1
+                    &-title
+                        @apply mb-1 line-clamp-3
+                &-image
+                    @apply shrink-0
+                
         &--trending
             @apply min-w-96
             
@@ -108,7 +112,7 @@
 
         &--trending
             .marquee
-                @apply -mx-4
+                @apply -mx-4 after:border-black after:pointer-events-none after:border-t after:absolute after:inset-y-0 after:inset-x-4 last:after:border-b 
             &-list
                 .marquee__list__item
                     @apply border-l pl-4
@@ -122,7 +126,9 @@
                 @apply my-4 
                 &-group
                     @apply flex items-center justify-between gap-x-2 inset-0 border-b
-    
+        &--headline
+            .grid3Cols
+                @apply pb-0 border-b-0
     .tab25--cat
         .tab25
             &-nav 

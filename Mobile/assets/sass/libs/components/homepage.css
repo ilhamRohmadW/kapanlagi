@@ -22,7 +22,7 @@
 }
 
 .section--slide25 .swiper-slide {
-  @apply w-45 {}
+  @apply w-46 {}
 }
 
 .section--slide25 .swiper-slide .item25-desc {
@@ -114,11 +114,8 @@
   .section--video .vidio-embed {
     @apply -m-[5px] w-[calc(100%+10px)] h-[calc(100%+10px)] {}
   }
-  .section--trending {
-    @apply -mx-4 {}
-  }
-  .section--trending-list {
-    @apply flex flex-col gap-6 pt-6 border-y divide-y relative {}
+  .section--trending .marquee {
+    @apply -mx-4 after:border-black after:pointer-events-none after:border-t after:absolute after:inset-y-0 after:inset-x-4 last:after:border-b {}
   }
   .section--trending-list .marquee__list__item {
     @apply border-l pl-4 {}
@@ -131,6 +128,9 @@
   }
   .section--search-form-group {
     @apply flex items-center justify-between gap-x-2 inset-0 border-b {}
+  }
+  .section--headline {
+    @apply mb-5 {}
   }
   .tab25--cat {
     @apply -mx-4 {}
