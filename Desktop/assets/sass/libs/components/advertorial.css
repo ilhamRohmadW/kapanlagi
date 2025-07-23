@@ -11,7 +11,7 @@
 }
 
 .advertorial-title {
-  @apply leading-tight line-clamp-2 {}
+  @apply leading-tight line-clamp-3 {}
 }
 
 .advertorial-detail {

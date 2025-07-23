@@ -121,7 +121,7 @@
     @apply flex-row items-center gap-4 {}
   }
   .item25--cast .item25-image {
-    @apply overflow-hidden rounded-full size-12 {}
+    @apply overflow-hidden rounded-full size-12 shrink-0 {}
   }
   .item25--cast .item25-detail {
     @apply flex flex-col gap-0.5 {}
@@ -147,65 +147,44 @@
   .section--schedule-city-select {
     @apply border p-2 outline-none flex-1 {}
   }
-  .section--DTMovie-headline {
-    @apply block relative after:z-0 after:absolute after:inset-0 after:pointer-events-none {}
-  }
-  .section--DTMovie-headline-overlay {
-    @apply absolute pointer-events-none inset-0 flex items-center justify-center {}
-  }
-  .section--DTMovie-headline-icon {
-    @apply relative z-10 {}
+  .section--DTMovie-title {
+    @apply line-clamp-3 leading-snug {}
   }
   .section--DTMovie-wrapper {
-    @apply relative -mt-10 mb-5 z-10 {}
+    @apply relative -mx-4 flex flex-col z-10 px-4 pb-12 {}
   }
-  .section--DTMovie-wrapper-top {
-    @apply flex items-start gap-4 mb-3 {}
+  .section--DTMovie-headline {
+    @apply absolute z-1 inset-0 pointer-events-none aspect-[2/1] {}
   }
-  .section--DTMovie-wrapper-detail {
-    @apply flex-1 flex flex-col gap-3 {}
+  .section--DTMovie-desc {
+    @apply flex-1 flex flex-col gap-4 relative z-3 -mt-6 {}
   }
-  .section--DTMovie-share {
-    @apply flex justify-between mb-3 {}
+  .section--DTMovie-announce {
+    @apply flex items-center gap-1.5 {}
   }
-  .section--DTMovie-tag {
-    @apply py-1 px-4 transition-colors {}
+  .section--DTMovie-tag, .section--DTMovie-showing {
+    @apply py-1 px-5 transition-colors rounded {}
+  }
+  .section--DTMovie-showing {
+    @apply flex items-center gap-2 {}
+  }
+  .section--DTMovie-showing-icon {
+    @apply block size-5 {}
   }
   .section--DTMovie-production {
     @apply flex items-center gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full {}
   }
   .section--DTMovie-poster {
-    @apply w-30 aspect-[3/4] shrink-0 rounded-xl overflow-hidden {}
+    @apply -mx-4 aspect-[2/3] overflow-hidden relative z-2 {}    @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none {}
   }
   .section--DTMovie-director {
     @apply flex flex-col {}
   }
-  .section--DTMovie-rating {
-    @apply flex items-center gap-5 {}
+  .section--DTMovie-rateWTrailer {
+    @apply flex items-stretch flex-wrap gap-x-4 gap-y-7 {}
   }
-  .section--DTMovie-rating-item {
-    @apply flex items-center gap-2 px-2 py-1 {}
-  }
-  .section--DTMovie-desc {
-    @apply pb-6 {}
-  }
-  .section--DTMovie-genre {
-    @apply flex justify-center items-center gap-2 flex-wrap {}
-  }
-  .section--DTMovie-genre-item {
-    @apply py-1 px-3 transition-colors {}
-  }
-  .section-titleWlink.--border {
-    @apply border-b pb-4 {}
-  }
-  .section--writer-list {
-    @apply flex flex-wrap gap-4 {}
-  }
-  .section--writer-list-item {
-    @apply *:flex *:items-center *:gap-4 {}
-  }
-  .section--show-on-list {
-    @apply flex flex-wrap gap-4 {}
+  .section--DTMovie-rateWTrailer-item {
+    @apply flex items-center gap-2 px-3 py-1 {}
   }
   .tab25--schedule .tab25-nav {
     @apply *:min-h-10 whitespace-nowrap mb-6 *:justify-center max-w-xl {}
@@ -217,13 +196,19 @@
     @apply border-black bg-black text-white {}
   }
   .share25 {
-    @apply flex items-center gap-2 {}
+    @apply flex items-center gap-3 my-2 {}
   }
   .share25-item {
-    @apply size-8 rounded-full flex items-center justify-center transition-colors {}
+    @apply size-9 rounded-full flex items-center justify-center transition-colors relative {}
   }
   .share25-item svg {
-    @apply transition-transform group-hover:scale-110 {}
+    @apply transition-transform group-hover:scale-110 pointer-events-none {}
+  }
+  .share25-item--link-float {
+    @apply absolute left-full inset-y-0 h-fit my-auto whitespace-nowrap transition-all opacity-0 rounded-full py-1 px-2 pointer-events-none {}
+  }
+  .share25-item--link.--show .share25-item--link-float {
+    @apply translate-x-1 opacity-100 {}
   }
   .readmore25 {
     @apply mb-5 {}
@@ -231,7 +216,37 @@
   .readmore25-btn {
     @apply ml-2 font-bold {}
   }
-  .divide-dots {
-    @apply *:*:after:size-1 *:*:after:rounded-full *:last:*:after:hidden {}
+  .divide-comma {
+    @apply flex flex-wrap items-center {}    @apply *:after:content-[','] *:after:mr-1 *:last:*:after:hidden *:underline {}
+  }
+  .box {
+    @apply mb-8 {}
+  }
+  .box:last-child {
+    @apply mb-0 {}
+  }
+  .box-title, .box-titleWlink {
+    @apply flex items-center justify-between border-b pb-4 mb-4 {}
+  }
+  .box-title-link, .box-titleWlink-link {
+    @apply relative {}    @apply before:absolute before:h-0.5 before:bg-black before:w-4 before:inset-y-0 before:left-0 before:my-auto before:transition-all {}
+  }
+  .box-title-link:hover::before, .box-titleWlink-link:hover::before {
+    @apply -translate-x-4 {}
+  }
+  .box-title-link svg, .box-titleWlink-link svg {
+    @apply transition-transform group-hover:-translate-x-1 h-auto {}
+  }
+  .box--genre-list {
+    @apply flex items-center gap-3 flex-wrap {}
+  }
+  .box--genre-list-item {
+    @apply py-1 px-3 transition-colors border rounded {}
+  }
+  .box--cast-list {
+    @apply grid gap-6 mb-6 {}
+  }
+  .box--showing-list {
+    @apply flex items-center gap-8 flex-wrap {}
   }
 }

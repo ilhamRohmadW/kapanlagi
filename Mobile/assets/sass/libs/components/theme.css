@@ -68,6 +68,9 @@
   .btn25--border {
     @apply border block p-4 max-w-64 text-center mx-auto {}
   }
+  .btn25--border-sm {
+    @apply w-fit py-1 px-2.5 {}
+  }
   .tab25-nav {
     @apply flex *:flex-1 *:flex *:items-center *:relative {}
   }

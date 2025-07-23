@@ -70,6 +70,9 @@
   .btn--border {
     @apply border block p-4 max-w-64 text-center mx-auto {}
   }
+  .btn--border-sm {
+    @apply w-fit py-1 px-2.5 {}
+  }
   .marquee {
     @apply relative py-8 overflow-hidden flex items-center pb-6 {}
   }

@@ -1,5 +1,9 @@
 .advertorial {
-  @apply pb-8 border-b gap-x-3 gap-y-5 grid grid-cols-2 {}
+  @apply gap-x-3 gap-y-4 grid grid-cols-2 {}
+}
+
+.advertorial-item {
+  @apply border-t pt-4 {}
 }
 
 .advertorial-figure {

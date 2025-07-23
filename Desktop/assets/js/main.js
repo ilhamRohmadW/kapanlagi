@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
         });
     });
 
-    
+
     const headerFixed = document.querySelector('#headerFixed');
 
     if (headerFixed) {
@@ -130,8 +130,7 @@ window.addEventListener('load', () => {
     if(share25){
         var sharelink = window.location.href;
         share25.forEach(function(item){
-            console.log(share25,item);
-            item.querySelector('.share25-item.--link').addEventListener('click', (e)=>{
+            item.querySelector('.share25-item--link').addEventListener('click', (e)=>{
                 if (window.isSecureContext) {
                     navigator.clipboard.writeText(sharelink);
                 } else {
@@ -144,14 +143,15 @@ window.addEventListener('load', () => {
                     document.execCommand('copy');
                     document.body.removeChild(textarea);
                 }
-                e.target.classList.add('show')
+                
+                e.target.classList.add('--show')
                 setTimeout(() => {
-                    e.target.classList.remove('show')
+                    e.target.classList.remove('--show')
                 }, 3000);
                 e.preventDefault()
             })
-            item.querySelector('.share25-item.--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(sharelink) + "%2F&amp;src=sdkpreparse"
-            item.querySelector('.share25-item.--x').href = "https://twitter.com/intent/tweet?url="+sharelink
+            item.querySelector('.share25-item--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(sharelink) + "%2F&amp;src=sdkpreparse"
+            item.querySelector('.share25-item--x').href = "https://twitter.com/intent/tweet?url="+sharelink
         })
     }
 
@@ -190,6 +190,17 @@ window.addEventListener('load', () => {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+        });
+    }
+
+    var animationContainer = document.querySelector('.section--DTMovie-showing-icon');
+    if (animationContainer) {
+        var anim = lottie.loadAnimation({
+            container: animationContainer,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'assets/images/icon-movie.json'
         });
     }
 });

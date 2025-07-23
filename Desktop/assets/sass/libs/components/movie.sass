@@ -75,7 +75,7 @@
                 &-desc
                     @apply flex flex-col h-full
                     &-title
-                        @apply mb-1 group-has-[.item25-btn]:flex-1
+                        @apply mb-1
                 &-btn
                     @apply border py-2.5 flex justify-center transition-colors mt-3
         &--event
@@ -95,7 +95,7 @@
                 &-detail
                     @apply flex flex-col gap-0.5
         &--show
-            @apply flex-row items-center gap-4
+            @apply flex-row items-center gap-3 font-bold
             .item25-image
                 @apply size-12 overflow-hidden rounded-full
     .section
@@ -112,48 +112,35 @@
                 &-select
                     @apply border p-2 outline-none flex-1
         &--DTMovie
-            &-headline
-                @apply block relative after:z-10 after:absolute after:inset-0 after:pointer-events-none
-                &-overlay
-                    @apply absolute pointer-events-none inset-0 flex items-center justify-center
-                &-icon
-                    @apply relative z-20
+            &-title
+                @apply line-clamp-2 leading-snug
             &-wrapper
-                @apply relative flex items-start -mt-32 px-10 mb-5 z-10 gap-6
-                &-detail
-                    @apply flex-1 flex flex-col gap-4
-            &-share
-                @apply flex justify-between
-            &-tag
-                @apply py-1 px-6 transition-colors
+                @apply relative -mx-4 bg-cover bg-center flex items-start z-10 gap-6 px-4 pt-50 pb-20
+                @apply before:absolute before:inset-0 before:backdrop-blur-md before:z-0 before:pointer-events-none
+                @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none
+            &-headline
+                @apply absolute z-1 inset-0 pointer-events-none aspect-[2/1]
+            &-desc
+                @apply flex-1 flex flex-col gap-4 relative z-3
+            &-announce
+                @apply flex items-center gap-1.5
+            &-tag,
+            &-showing
+                @apply py-1 px-5 transition-colors rounded
+            &-showing
+                @apply flex items-center gap-2
+                &-icon
+                    @apply block size-5
             &-production
                 @apply flex items-center gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full
             &-poster
-                @apply w-1/4 aspect-[3/4] rounded-xl overflow-hidden
+                @apply w-64 aspect-[2/3] overflow-hidden relative z-3
             &-director
                 @apply flex flex-col
-            &-rating
-                @apply flex items-center gap-5
+            &-rateWTrailer
+                @apply flex items-stretch gap-5
                 &-item
                     @apply flex items-center gap-2 px-3 py-1
-            &-desc
-                @apply px-10 pb-6
-            &-genre
-                @apply flex justify-center items-center gap-2 flex-wrap
-                &-item
-                    @apply py-1 px-3 transition-colors
-        &-titleWlink
-            &.--border
-                @apply border-b pb-4
-                .section-titleWlink
-                    &-link
-                        @apply relative
-                        @apply before:absolute before:h-0.5 before:bg-black before:w-4 before:inset-y-0 before:left-0 before:my-auto before:transition-all
-                        &:hover
-                            &::before
-                                @apply -translate-x-4 
-                        svg
-                            @apply transition-transform group-hover:-translate-x-1 h-auto
         &--writer
             &-list
                 @apply flex flex-wrap gap-4
@@ -173,13 +160,47 @@
     .share25
         @apply flex items-center gap-3
         &-item
-            @apply size-9 rounded-full flex items-center justify-center transition-colors
+            @apply size-9 rounded-full flex items-center justify-center transition-colors relative
             svg
-                @apply transition-transform group-hover:scale-110
+                @apply transition-transform group-hover:scale-110 pointer-events-none
+            &--link
+                &-float
+                    @apply absolute left-full inset-y-0 h-fit my-auto whitespace-nowrap transition-all opacity-0 rounded-full py-1 px-2 pointer-events-none
+                &.--show
+                    .share25-item--link-float
+                        @apply translate-x-1 opacity-100
+            
     .readmore25
         @apply mb-5
         &-btn
             @apply ml-2 font-bold
-    
-    .divide-dots
-        @apply *:*:after:size-1 *:*:after:rounded-full *:last:*:after:hidden
+    .divide-comma
+        @apply flex flex-wrap items-center
+        @apply *:after:content-[','] *:after:mr-1 *:last:*:after:hidden *:underline
+    .box
+        @apply mb-8
+        &:last-child
+            @apply mb-0
+        &-title,
+        &-titleWlink
+            @apply flex items-center justify-between border-b pb-4 mb-4
+            &-link
+                @apply relative
+                @apply before:absolute before:h-0.5 before:bg-black before:w-4 before:inset-y-0 before:left-0 before:my-auto before:transition-all
+                &:hover
+                    &::before
+                        @apply -translate-x-4 
+                svg
+                    @apply transition-transform group-hover:-translate-x-1 h-auto
+        &--genre
+            &-list
+                @apply flex items-center gap-3 flex-wrap
+                &-item
+                    @apply py-1 px-3 transition-colors border rounded
+        &--cast
+            &-list
+                @apply grid grid-cols-2 gap-6 mb-6
+        &--showing
+            &-list
+                @apply flex items-center gap-8 flex-wrap 
+        

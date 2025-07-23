@@ -23,22 +23,6 @@ window.addEventListener('load', () => {
     });
 
 
-    document.querySelectorAll('.tab25-nav-btn').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const tabId = button.getAttribute('data-tab');
-
-            // Remove active class from all buttons and contents
-            document.querySelectorAll('.tab25-nav-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab25-content-item').forEach(tab => tab.classList.remove('active'));
-
-            // Add active class to clicked button and corresponding content
-            button.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
-
-            e.preventDefault()
-        });
-    });
-    
     const headerFixed = document.querySelector('#headerFixed');
 
     if (headerFixed) {
@@ -61,8 +45,23 @@ window.addEventListener('load', () => {
         });
     }
 
-    
-    document.querySelectorAll('.section--slide25').forEach(container => {
+    document.querySelectorAll('.tab25-nav-btn')?.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const tabId = button.getAttribute('data-tab');
+
+            // Remove active class from all buttons and contents
+            button.closest('.tab25').querySelectorAll('.tab25-nav-btn').forEach(btn => btn.classList.remove('active'));
+            button.closest('.tab25').querySelectorAll('.tab25-content-item').forEach(tab => tab.classList.remove('active'));
+
+            // Add active class to clicked button and corresponding content
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+
+            e.preventDefault()
+        });
+    });
+
+    document.querySelectorAll('.section--slide25')?.forEach(container => {
         const videoSwiper = new Swiper(container.querySelector('.section--slide25-swiper'), {
             slidesPerView: 'auto',
             spaceBetween: 24,
@@ -131,6 +130,35 @@ window.addEventListener('load', () => {
         })
     }
 
+    var share25 = document.querySelectorAll('.share25')
+    
+    if(share25){
+        var sharelink = window.location.href;
+        share25.forEach(function(item){
+            item.querySelector('.share25-item--link').addEventListener('click', (e)=>{
+                if (window.isSecureContext) {
+                    navigator.clipboard.writeText(sharelink);
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = sharelink;
+                    textarea.setAttribute('readonly', '')
+                    textarea.style.cssText = "position: fixed; left: -999px;";
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                }
+                e.target.classList.add('--show')
+                setTimeout(() => {
+                    e.target.classList.remove('--show')
+                }, 3000);
+                e.preventDefault()
+            })
+            item.querySelector('.share25-item--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(sharelink) + "%2F&amp;src=sdkpreparse"
+            item.querySelector('.share25-item--x').href = "https://twitter.com/intent/tweet?url="+sharelink
+        })
+    }
+
     const readmore25 = document.querySelectorAll(".readmore25");
     readmore25.forEach(function(item){
         const fullText = item.textContent.trim();
@@ -169,4 +197,14 @@ window.addEventListener('load', () => {
         });
     }
 
+    var animationContainer = document.querySelector('.section--DTMovie-showing-icon');
+    if (animationContainer) {
+        var anim = lottie.loadAnimation({
+            container: animationContainer,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'assets/images/icon-movie.json'
+        });
+    }
 });
