@@ -203,4 +203,10 @@
         &--showing
             &-list
                 @apply flex items-center gap-8 flex-wrap 
-        
+    .breadcrumb
+        @apply flex items-center gap-1
+        &-item
+            @apply after:content-['>'] after:ml-1
+            &:last-child
+                &::after
+                    @apply hidden
