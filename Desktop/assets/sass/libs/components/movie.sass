@@ -21,7 +21,6 @@
             &.swiper
                 counter-reset: my-awesome-counter
                 @apply -ml-4 pl-4
-                // @apply lg:ml-0 lg:pl-0
                 .swiper
                     &-slide
                         counter-increment: my-awesome-counter
@@ -31,6 +30,10 @@
                             -webkit-text-stroke: 1.4px white
                         .item25-desc
                             @apply border-l-0 pl-0
+    &--event
+        .section--slide25-swiper
+            &.swiper
+                @apply -ml-4 pl-4
     &--cast
         .swiper
             @apply -mb-6 -mx-4 px-4

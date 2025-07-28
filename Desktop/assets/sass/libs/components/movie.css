@@ -40,6 +40,10 @@
   @apply border-l-0 pl-0 {}
 }
 
+.section--event .section--slide25-swiper.swiper {
+  @apply -ml-4 pl-4 {}
+}
+
 .section--cast .swiper {
   @apply -mb-6 -mx-4 px-4 {}
 }
