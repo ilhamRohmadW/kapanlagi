@@ -47,6 +47,7 @@
                 &-prev,
                 &-next
                     @apply after:hidden size-8 shadow-md rounded-full bg-white
+
 @layer components 
     .header25--movie 
         @apply bg-fifth 
@@ -109,9 +110,9 @@
                 &-detail
                     @apply flex flex-col gap-0.5
         &--show
-            @apply flex-row items-center gap-4
+            @apply flex-row items-center gap-1
             .item25-image
-                @apply size-12 overflow-hidden rounded-full
+                @apply size-10 overflow-hidden rounded-full
     .section
         &--event
             &-list
@@ -125,53 +126,27 @@
                     @apply px-3 py-1 block
                 &-select
                     @apply border p-2 outline-none flex-1
-        // &--DTMovie
-        //     &-headline
-        //         @apply block relative after:z-0 after:absolute after:inset-0 after:pointer-events-none
-        //         &-overlay
-        //             @apply absolute pointer-events-none inset-0 flex items-center justify-center
-        //         &-icon
-        //             @apply relative z-10
-        //     &-wrapper
-        //         @apply relative -mt-10 mb-5 z-10
-        //         &-top
-        //             @apply flex items-start gap-4 mb-3
-        //         &-detail
-        //             @apply flex-1 flex flex-col gap-3
-        //     &-share
-        //         @apply flex justify-between mb-3
-        //     &-tag
-        //         @apply py-1 px-4 transition-colors
-        //     &-production
-        //         @apply flex items-center gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full
-        //     &-poster
-        //         @apply w-30 aspect-[3/4] shrink-0 rounded-xl overflow-hidden
-        //     &-director
-        //         @apply flex flex-col
-        //     &-rating
-        //         @apply flex items-center gap-5
-        //         &-item
-        //             @apply flex items-center gap-2 px-2 py-1
-        //     &-desc
-        //         @apply pb-6
-        //     &-genre
-        //         @apply flex justify-center items-center gap-2 flex-wrap
-        //         &-item
-        //             @apply py-1 px-3 transition-colors
         &--DTMovie
+            @apply mb-8
+            .breadcrumb
+                @apply w-full
             &-title
                 @apply line-clamp-3 leading-snug
             &-wrapper
-                @apply relative -mx-4 flex flex-col z-10 px-4 pb-12
+                @apply relative -mx-4 bg-cover bg-center flex flex-wrap z-10 px-4 pb-9 pt-6 gap-x-3 gap-y-5
+                @apply before:absolute before:inset-0 before:backdrop-blur-md before:z-0 before:pointer-events-none
+                @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none
             &-headline
                 @apply absolute z-1 inset-0 pointer-events-none aspect-[2/1]
             &-desc
-                @apply flex-1 flex flex-col gap-4 relative z-3 -mt-6
+                @apply flex-1 flex flex-col gap-4 z-3
+            &-detail
+                @apply w-full flex flex-col gap-5 z-3
             &-announce
                 @apply flex items-center gap-1.5
             &-tag,
             &-showing
-                @apply py-1 px-5 transition-colors rounded
+                @apply py-1 px-2 transition-colors rounded
             &-showing
                 @apply flex items-center gap-2
                 &-icon
@@ -179,25 +154,13 @@
             &-production
                 @apply flex items-center gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full
             &-poster
-                @apply -mx-4 aspect-[2/3] overflow-hidden relative z-2
-                @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none
+                @apply aspect-[2/3] w-28 overflow-hidden relative z-2
             &-director
                 @apply flex flex-col
             &-rateWTrailer
-                @apply flex items-stretch flex-wrap gap-x-4 gap-y-7
+                @apply flex items-stretch flex-wrap gap-x-3
                 &-item
-                    @apply flex items-center gap-2 px-3 py-1
-        // &-titleWlink
-        //     &.--border
-        //         @apply border-b pb-4
-        // &--writer
-        //     &-list
-        //         @apply flex flex-wrap gap-4
-        //         &-item
-        //             @apply *:flex *:items-center *:gap-4
-        // &--show-on
-        //     &-list
-        //         @apply flex flex-wrap gap-4
+                    @apply flex items-center gap-2 px-2 py-1
     .tab25--schedule
         .tab25
             &-nav 
@@ -207,7 +170,7 @@
                     &.active 
                         @apply border-black bg-black text-white
     .share25
-        @apply flex items-center gap-3 my-2
+        @apply flex items-center gap-3
         &-item
             @apply size-9 rounded-full flex items-center justify-center transition-colors relative
             svg
@@ -251,4 +214,22 @@
                 @apply grid gap-6 mb-6
         &--showing
             &-list
-                @apply flex items-center gap-8 flex-wrap 
+                @apply flex items-center gap-4 flex-wrap 
+    
+    .breadcrumb
+        @apply flex items-center gap-1
+        &-item
+            @apply after:content-['>'] after:ml-1
+            &:last-child
+                &::after
+                    @apply hidden
+    .popup
+        @apply fixed z-20 inset-0 p-4 flex items-center justify-center transition-opacity opacity-0 pointer-events-none
+        &-overlay
+            @apply absolute inset-0
+        &-inner
+            @apply w-full 
+        &-video
+            @apply aspect-video w-full relative max-w-4xl mx-auto
+        &.--open
+            @apply opacity-100 pointer-events-auto

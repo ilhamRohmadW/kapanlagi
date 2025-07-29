@@ -203,4 +203,31 @@ window.addEventListener('load', () => {
             path: 'assets/images/icon-movie.json'
         });
     }
+
+    let popupTrigger = document.querySelectorAll('[data-popup]')
+    if (popupTrigger){
+        popupTrigger?.forEach(item => {
+            item.addEventListener("click", (e) => {
+                let popup = document.querySelector('[data-popup-open="'+item.dataset.popup+'"]')
+                let popupVideo = popup.querySelector('.popup-iframe')
+                popup.classList.add('--open')
+                if (popupVideo) {
+                    popupVideo.src = popupVideo.dataset.src
+                }
+                e.preventDefault()
+            })
+        })
+        let popupClose = document.querySelectorAll('[data-popup-close]')
+        popupClose?.forEach(item => {
+            item.addEventListener("click", (e) => {
+            let popup = document.querySelector('[data-popup-open].--open')
+            let popupVideo = popup.querySelector('.popup-iframe')
+            popup.classList.remove('--open')
+            if (popupVideo) {
+                popupVideo.src = ''
+            }
+            e.preventDefault()
+            })
+        })
+    }
 });

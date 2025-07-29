@@ -265,4 +265,19 @@
   .breadcrumb-item:last-child::after {
     @apply hidden {}
   }
+  .popup {
+    @apply fixed z-1000 inset-0 p-4 flex items-center justify-center transition-opacity opacity-0 pointer-events-none {}
+  }
+  .popup-overlay {
+    @apply absolute inset-0 {}
+  }
+  .popup-inner {
+    @apply w-full {}
+  }
+  .popup-video {
+    @apply aspect-video w-full relative max-w-4xl mx-auto {}
+  }
+  .popup.--open {
+    @apply opacity-100 pointer-events-auto {}
+  }
 }

@@ -645,7 +645,7 @@
                                     <img class="rating-imdb" src="assets/images/movie/imdb-color.png" width="55" height="28" alt="">
                                     <span>Rating 8,4 / 10</span>
                                 </div>
-                                <a href="#" class="section--DTMovie-rateWTrailer-item bg-white text-black transition-colors hover:bg-black hover:text-white">
+                                <a href="#" class="section--DTMovie-rateWTrailer-item bg-white text-black transition-colors hover:bg-black hover:text-white" data-popup="trailer">
                                     <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.838135 0.5V14.5L11.8381 7.5L0.838135 0.5Z" fill="currentColor"/></svg>
                                     <span>Tonton Trailer</span>
                                 </a>
@@ -688,6 +688,7 @@
                         </div>
                     </div>
                 </div>
+
             </section>
 
             <!-- <div class="ads ads--leaderboard">
@@ -1905,6 +1906,14 @@
         </main>
         <!--end.main-->
 
+        <div class="popup" data-popup-open="trailer">
+            <span class="popup-overlay bg-black/80" data-popup-close></span>
+            <div class="popup-inner">
+                <div class="popup-video bg-black">
+                    <iframe class="popup-iframe w-full h-full" width="335" height="212" data-src="https://www.youtube.com/embed/-sAOWhvheK8?si=Hg9P9n949g_3-SpO?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
        <!--footer-->
        <footer class="footer25 bg-fourth">
             <div class="container25">

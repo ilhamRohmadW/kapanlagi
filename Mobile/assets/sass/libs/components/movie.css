@@ -131,10 +131,10 @@
     @apply flex flex-col gap-0.5 {}
   }
   .item25--show {
-    @apply flex-row items-center gap-4 {}
+    @apply flex-row items-center gap-1 {}
   }
   .item25--show .item25-image {
-    @apply size-12 overflow-hidden rounded-full {}
+    @apply size-10 overflow-hidden rounded-full {}
   }
   .section--event-list {
     @apply flex flex-col gap-5 mb-5 {}
@@ -151,23 +151,32 @@
   .section--schedule-city-select {
     @apply border p-2 outline-none flex-1 {}
   }
+  .section--DTMovie {
+    @apply mb-8 {}
+  }
+  .section--DTMovie .breadcrumb {
+    @apply w-full {}
+  }
   .section--DTMovie-title {
     @apply line-clamp-3 leading-snug {}
   }
   .section--DTMovie-wrapper {
-    @apply relative -mx-4 flex flex-col z-10 px-4 pb-12 {}
+    @apply relative -mx-4 bg-cover bg-center flex flex-wrap z-10 px-4 pb-9 pt-6 gap-x-3 gap-y-5 {}    @apply before:absolute before:inset-0 before:backdrop-blur-md before:z-0 before:pointer-events-none {}    @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none {}
   }
   .section--DTMovie-headline {
     @apply absolute z-1 inset-0 pointer-events-none aspect-[2/1] {}
   }
   .section--DTMovie-desc {
-    @apply flex-1 flex flex-col gap-4 relative z-3 -mt-6 {}
+    @apply flex-1 flex flex-col gap-4 z-3 {}
+  }
+  .section--DTMovie-detail {
+    @apply w-full flex flex-col gap-5 z-3 {}
   }
   .section--DTMovie-announce {
     @apply flex items-center gap-1.5 {}
   }
   .section--DTMovie-tag, .section--DTMovie-showing {
-    @apply py-1 px-5 transition-colors rounded {}
+    @apply py-1 px-2 transition-colors rounded {}
   }
   .section--DTMovie-showing {
     @apply flex items-center gap-2 {}
@@ -179,16 +188,16 @@
     @apply flex items-center gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full {}
   }
   .section--DTMovie-poster {
-    @apply -mx-4 aspect-[2/3] overflow-hidden relative z-2 {}    @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none {}
+    @apply aspect-[2/3] w-28 overflow-hidden relative z-2 {}
   }
   .section--DTMovie-director {
     @apply flex flex-col {}
   }
   .section--DTMovie-rateWTrailer {
-    @apply flex items-stretch flex-wrap gap-x-4 gap-y-7 {}
+    @apply flex items-stretch flex-wrap gap-x-3 {}
   }
   .section--DTMovie-rateWTrailer-item {
-    @apply flex items-center gap-2 px-3 py-1 {}
+    @apply flex items-center gap-2 px-2 py-1 {}
   }
   .tab25--schedule .tab25-nav {
     @apply *:min-h-10 whitespace-nowrap mb-6 *:justify-center max-w-xl {}
@@ -200,7 +209,7 @@
     @apply border-black bg-black text-white {}
   }
   .share25 {
-    @apply flex items-center gap-3 my-2 {}
+    @apply flex items-center gap-3 {}
   }
   .share25-item {
     @apply size-9 rounded-full flex items-center justify-center transition-colors relative {}
@@ -251,6 +260,30 @@
     @apply grid gap-6 mb-6 {}
   }
   .box--showing-list {
-    @apply flex items-center gap-8 flex-wrap {}
+    @apply flex items-center gap-4 flex-wrap {}
+  }
+  .breadcrumb {
+    @apply flex items-center gap-1 {}
+  }
+  .breadcrumb-item {
+    @apply after:content-['>'] after:ml-1 {}
+  }
+  .breadcrumb-item:last-child::after {
+    @apply hidden {}
+  }
+  .popup {
+    @apply fixed z-20 inset-0 p-4 flex items-center justify-center transition-opacity opacity-0 pointer-events-none {}
+  }
+  .popup-overlay {
+    @apply absolute inset-0 {}
+  }
+  .popup-inner {
+    @apply w-full {}
+  }
+  .popup-video {
+    @apply aspect-video w-full relative max-w-4xl mx-auto {}
+  }
+  .popup.--open {
+    @apply opacity-100 pointer-events-auto {}
   }
 }
