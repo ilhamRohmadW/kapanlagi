@@ -95,6 +95,19 @@
             .item25
                 &-image
                     @apply overflow-hidden rounded-full size-12
+                    // @apply before:absolute before:inset-0 before:flex before:items-center before:justify-center before:text-2xl before:font-bold
+                    // &:before
+                    //     content: var(--letter, '')
+                    //     color: var(--letter-color, #fff)
+                    //     background-color: var(--bg-color, rgba(0, 0, 0, 0.5))
+                    img
+                        @apply relative
+                &-initial
+                    @apply absolute inset-0 flex items-center justify-center text-2xl font-bold
+                    background-color: var(--bg-color, rgba(0, 0, 0, 0.2))
+                    color: var(--letter-color, #000)
+                    &:before
+                        content: var(--letter)
                 &-detail
                     @apply flex flex-col gap-0.5
         &--show

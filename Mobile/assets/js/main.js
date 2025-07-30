@@ -233,4 +233,47 @@ window.addEventListener('load', () => {
             })
         })
     }
+    let itemCast = document.querySelectorAll('.item25--cast')
+    if (itemCast) {
+        function hexToRGBA(hex, opacity = 1) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+        }
+
+        const rootStyles = getComputedStyle(document.documentElement);
+
+        const varNames = ['--color-primary', '--color-secondary', '--color-third', '--color-fifth'];
+        const totalColors = varNames.length;
+
+        itemCast.forEach((item, index) => {
+            const colorVar = varNames[index % totalColors];
+            const hexColor = rootStyles.getPropertyValue(colorVar).trim();
+
+            const img = item.querySelector('img');
+            const figure = item.querySelector('.item25-image');
+            const nameEl = item.querySelector('.item25-name');
+            const name = nameEl?.textContent.trim();
+            const firstLetter = name.charAt(0).toUpperCase();
+            const bgColor = hexToRGBA(hexColor, 0.2);
+
+            // figure.classList.add('fallback');
+            function applyInitial() {
+                figure.querySelector('.item25-initial').textContent = firstLetter
+                // figure.style.setProperty('--letter', `"${firstLetter}"`);
+                figure.style.setProperty('--letter-color', hexColor);
+                figure.style.setProperty('--bg-color', bgColor);
+            }
+            if (figure.querySelector('.item25-initial')) {
+                applyInitial()
+            }
+
+            // img.addEventListener('error', applyFallback);
+
+            // if (!img.complete || img.naturalWidth === 0) {
+            // applyFallback();
+            // }
+        });
+    }
 });

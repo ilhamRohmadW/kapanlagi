@@ -121,6 +121,16 @@
   .item25--cast .item25-image {
     @apply overflow-hidden rounded-full size-12 {}
   }
+  .item25--cast .item25-image img {
+    @apply relative {}
+  }
+  .item25--cast .item25-initial {
+    @apply absolute inset-0 flex items-center justify-center text-2xl font-bold {}    background-color: var(--bg-color, rgba(0, 0, 0, 0.2));
+    color: var(--letter-color, #000);
+  }
+  .item25--cast .item25-initial:before {
+    content: var(--letter);
+  }
   .item25--cast .item25-detail {
     @apply flex flex-col gap-0.5 {}
   }

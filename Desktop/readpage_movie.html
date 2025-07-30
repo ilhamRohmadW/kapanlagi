@@ -739,7 +739,12 @@
                                     <div class="box--cast-list infinite-list">
                                         <a href="#" class="item25 item25--cast group">
                                             <figure class="item25-image">
-                                                <img src="assets/images/show-1.png" width="48" height="48" class="object-cover w-full h-full">
+                                                <!-- <?php if ($user['image']) : ?>
+                                                    <img src="<?= $user['image'] ?>" alt="<?= $user['name'] ?>">
+                                                <?php else: ?>
+                                                    <span class="item25-initial"><?= strtoupper($user['name'][0]) ?></span>
+                                                <?php endif; ?> -->
+                                                <span class="item25-initial"></span>
                                             </figure>
                                             <div class="item25-detail">
                                                 <span class="item25-name font-bold group-hover:text-primary">Lisa Wilderman</span>
