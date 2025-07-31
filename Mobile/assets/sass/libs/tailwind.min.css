@@ -2812,6 +2812,9 @@
       padding-block: calc(var(--spacing) * 4);
     }
   }
+  .tab25--cat .tab25-content-item .item25-image {
+    overflow: hidden;
+  }
 }
 .section--HMovie {
   margin-bottom: calc(var(--spacing) * 0);

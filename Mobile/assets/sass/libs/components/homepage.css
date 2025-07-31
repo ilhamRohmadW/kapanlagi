@@ -150,4 +150,7 @@
   .tab25--cat .tab25-content-item-article-grid3Rows {
     @apply grid grid-cols-1 *:border-t *:py-4 {}
   }
+  .tab25--cat .tab25-content-item .item25-image {
+    @apply overflow-hidden {}
+  }
 }
