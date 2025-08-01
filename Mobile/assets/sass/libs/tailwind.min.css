@@ -1933,11 +1933,11 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
-  .text-\[1\.75rem\] {
-    font-size: 1.75rem;
-  }
   .text-\[10px\] {
     font-size: 10px;
+  }
+  .text-\[28px\] {
+    font-size: 28px;
   }
   .leading-tight {
     --tw-leading: var(--leading-tight);

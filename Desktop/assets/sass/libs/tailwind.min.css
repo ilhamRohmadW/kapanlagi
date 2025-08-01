@@ -2190,7 +2190,7 @@
     pointer-events: none;
     position: fixed;
     inset: calc(var(--spacing) * 0);
-    z-index: 1000;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;
