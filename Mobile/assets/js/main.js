@@ -156,6 +156,7 @@ window.addEventListener('load', () => {
             })
             item.querySelector('.share25-item--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(sharelink) + "%2F&amp;src=sdkpreparse"
             item.querySelector('.share25-item--x').href = "https://twitter.com/intent/tweet?url="+sharelink
+            item.querySelector('.share25-item--whatsapp').href = "https://wa.me/?text="+ encodeURIComponent(sharelink)
         })
     }
 
