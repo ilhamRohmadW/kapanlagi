@@ -30,7 +30,8 @@ window.addEventListener('load', () => {
             const rect = headerFixed.getBoundingClientRect();
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const offsetTop = rect.top + scrollTop; // Akurat meskipun layout dinamis
-    
+
+            console.log ({scrollTop}, {offsetTop},scrollTop > offsetTop)
             if (scrollTop > offsetTop) {
                 headerFixed.classList.add('stick');
             } else {
