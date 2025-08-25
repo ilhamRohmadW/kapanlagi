@@ -141,13 +141,13 @@
             &-title
                 @apply line-clamp-3 leading-snug
             &-wrapper
-                @apply relative -mx-4 bg-cover bg-center flex flex-wrap z-10 px-4 pb-9 pt-6 gap-x-3 gap-y-5
+                @apply relative -mx-4 bg-cover bg-center flex flex-wrap items-start z-10 px-4 pb-9 pt-6 gap-x-3 gap-y-5
                 @apply before:absolute before:inset-0 before:backdrop-blur-md before:z-0 before:pointer-events-none
                 @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none
             &-headline
                 @apply absolute z-1 inset-0 pointer-events-none aspect-[2/1]
             &-desc
-                @apply flex-1 flex flex-col gap-4 z-3
+                @apply flex-1 flex flex-col gap-2 z-3 justify-center self-stretch
             &-detail
                 @apply w-full flex flex-col gap-5 z-3
             &-announce
@@ -160,7 +160,7 @@
                 &-icon
                     @apply block size-5
             &-production
-                @apply flex items-center gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full
+                @apply flex items-center flex-wrap gap-2 *:flex *:items-center *:gap-2 *:last:after:hidden *:after:block *:after:size-1.5 *:after:rounded-full
             &-poster
                 @apply aspect-[2/3] w-28 overflow-hidden relative z-2
             &-director
@@ -180,15 +180,15 @@
     .share25
         @apply flex items-center gap-3
         &-item
-            @apply size-9 rounded-full flex items-center justify-center transition-colors relative
+            @apply size-9 rounded-full flex items-center justify-center transition-colors relative border
             svg
                 @apply transition-transform group-hover:scale-110 pointer-events-none
             &--link
                 &-float
-                    @apply absolute left-full inset-y-0 h-fit my-auto whitespace-nowrap transition-all opacity-0 rounded-full py-1 px-2 pointer-events-none
+                    @apply absolute left-0 bottom-full h-fit my-auto whitespace-nowrap transition-all opacity-0 rounded-full py-1 px-2 pointer-events-none
                 &.--show
                     .share25-item--link-float
-                        @apply translate-x-1 opacity-100
+                        @apply -translate-y-1.5 opacity-100
     .readmore25
         @apply mb-5
         &-btn

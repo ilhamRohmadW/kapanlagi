@@ -131,7 +131,7 @@
             &-title
                 @apply line-clamp-2 leading-snug
             &-wrapper
-                @apply relative -mx-4 bg-cover bg-center flex items-start z-10 gap-6 px-4 pt-50 pb-20
+                @apply relative -mx-4 bg-cover bg-center flex flex-wrap items-start z-10 gap-6 px-4 py-20
                 @apply before:absolute before:inset-0 before:backdrop-blur-md before:z-0 before:pointer-events-none
                 @apply after:absolute after:inset-0 after:z-2 after:pointer-events-none
             &-headline
@@ -176,7 +176,7 @@
     .share25
         @apply flex items-center gap-3
         &-item
-            @apply size-9 rounded-full flex items-center justify-center transition-colors relative
+            @apply size-9 rounded-full flex items-center justify-center transition-colors relative border
             svg
                 @apply transition-transform group-hover:scale-110 pointer-events-none
             &--link
@@ -220,7 +220,7 @@
             &-list
                 @apply flex items-center gap-8 flex-wrap 
     .breadcrumb
-        @apply flex items-center gap-1
+        @apply flex items-center gap-1 w-full relative z-3
         &-item
             @apply after:content-['>'] after:ml-1
             &:last-child

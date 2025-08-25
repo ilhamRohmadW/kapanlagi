@@ -6,7 +6,9 @@ window.addEventListener('load', () => {
             const targetElement = document.getElementById(targetId);
             if (targetElement) 
                 targetElement.classList.add('open');
-                document.body.classList.add('expand');
+                if (targetId == 'header25Collapse') {
+                    document.body.classList.add('expand');
+                }
             e.preventDefault()
         });
     });
@@ -17,7 +19,9 @@ window.addEventListener('load', () => {
             const targetElement = document.getElementById(targetId);
             if (targetElement) 
                 targetElement.classList.remove('open');
-                document.body.classList.remove('expand');
+                if (targetId == 'header25Collapse') {
+                    document.body.classList.remove('expand');
+                }
             e.preventDefault()
         });
     });
