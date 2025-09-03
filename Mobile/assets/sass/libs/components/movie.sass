@@ -177,18 +177,6 @@
                     @apply border
                     &.active 
                         @apply border-black bg-black text-white
-    .share25
-        @apply flex items-center gap-3
-        &-item
-            @apply size-9 rounded-full flex items-center justify-center transition-colors relative border
-            svg
-                @apply transition-transform group-hover:scale-110 pointer-events-none
-            &--link
-                &-float
-                    @apply absolute left-0 bottom-full h-fit my-auto whitespace-nowrap transition-all opacity-0 rounded-full py-1 px-2 pointer-events-none
-                &.--show
-                    .share25-item--link-float
-                        @apply -translate-y-1.5 opacity-100
     .readmore25
         @apply mb-5
         &-btn

@@ -1,18 +1,16 @@
 .section
     &--dt
         &-breadcrumb 
-            @apply mb-4 flex items-center flex-wrap gap-1.5 *:last:after:hidden *:after:ml-1.5 *:after:content-['>']
-            .active
-                @apply text-black
+            @apply mb-3 flex items-center flex-wrap gap-1.5 *:last:after:hidden *:after:ml-1.5 *:after:content-['>']
         &-paragraph:first-child 
             p:first-of-type
                 @apply first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-3 first-letter:float-left first-letter:font-head 
         &-title
-            @apply mb-4
+            @apply mb-13
         &-row
             @apply flex flex-wrap items-center gap-2 justify-between
             &--top
-                @apply border-y py-4 mb-6
+                @apply border-b pb-4
             &--bottom
                 @apply px-4 py-1 rounded-lg mb-6
             &-title
@@ -21,9 +19,10 @@
             h2
                 @apply font-head text-xl
         &-image
-            @apply mb-4
             &-figure
-                @apply aspect-square overflow-hidden
+                @apply aspect-square overflow-hidden mb-2
+            span
+                @apply block text-right
         &-body
             @apply space-y-4 mb-4
         &-paragraph
@@ -50,7 +49,7 @@
         @apply flex flex-col flex-1
 .box
     &--border
-        @apply pt-6 border-t-2
+        @apply py-6 border-t-2
     &-topic
         &-list
             @apply flex items-center gap-3 flex-wrap

@@ -1,9 +1,5 @@
 .section--dt-breadcrumb {
-  @apply mb-4 flex items-center flex-wrap gap-1.5 *:last:after:hidden *:after:ml-1.5 *:after:content-['>'] {}
-}
-
-.section--dt-breadcrumb .active {
-  @apply text-black {}
+  @apply mb-3 flex items-center flex-wrap gap-1.5 *:last:after:hidden *:after:ml-1.5 *:after:content-['>'] {}
 }
 
 .section--dt-paragraph:first-child p:first-of-type {
@@ -11,7 +7,7 @@
 }
 
 .section--dt-title {
-  @apply mb-4 {}
+  @apply mb-13 {}
 }
 
 .section--dt-row {
@@ -19,7 +15,7 @@
 }
 
 .section--dt-row--top {
-  @apply border-y py-4 mb-6 {}
+  @apply border-b pb-4 {}
 }
 
 .section--dt-row--bottom {
@@ -34,12 +30,12 @@
   @apply font-head text-xl {}
 }
 
-.section--dt-image {
-  @apply mb-4 {}
+.section--dt-image-figure {
+  @apply aspect-square overflow-hidden mb-2 {}
 }
 
-.section--dt-image-figure {
-  @apply aspect-square overflow-hidden {}
+.section--dt-image span {
+  @apply block text-right {}
 }
 
 .section--dt-body {
@@ -91,7 +87,7 @@
 }
 
 .box--border {
-  @apply pt-6 border-t-2 {}
+  @apply py-6 border-t-2 {}
 }
 
 .box-topic-list {

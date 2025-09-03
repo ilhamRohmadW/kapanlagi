@@ -8,12 +8,12 @@
 }
 
 .section--slide25 .swiper-navigation {
-  @apply flex items-center justify-end gap-4 h-4 mt-11 {}
+  @apply flex items-center justify-end gap-4 h-5 mt-11 {}
 }
 
 .section--slide25 .swiper-navigation .swiper-button-prev,
 .section--slide25 .swiper-navigation .swiper-button-next {
-  @apply relative after:hidden h-4 mt-0 inset-0 w-auto flex items-center gap-2 outline-none {}
+  @apply relative after:hidden h-full mt-0 inset-0 w-auto flex items-center gap-1.5 outline-none {}
 }
 
 .section--slide25 .swiper-navigation .swiper-button-prev svg,

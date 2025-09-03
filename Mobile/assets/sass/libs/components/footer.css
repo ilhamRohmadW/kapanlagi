@@ -1,6 +1,6 @@
 @layer components {
   .footer25 {
-    @apply py-8 {}
+    @apply pt-8 pb-30 {}
   }
   .footer25-logo {
     @apply inline-block align-middle mb-8 {}

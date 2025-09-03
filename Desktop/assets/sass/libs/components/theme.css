@@ -37,7 +37,7 @@
     @apply translate-0 opacity-100 pointer-events-auto {}
   }
   .writingModeSideway {
-    @apply whitespace-nowrap -rotate-90 inline-block absolute origin-top-left top-0 left-0 transform-[translateX(-100%)] {}
+    @apply whitespace-nowrap inline-block absolute origin-top-left top-0 left-0 transform-[translateX(-100%)] {}
   }
   @keyframes marquee {
     0% {
@@ -89,6 +89,12 @@
   .marquee.--reversed .marquee__list {
     animation-direction: reverse;
   }
+  .marquee--small {
+    @apply pt-0 {}
+  }
+  .marquee--small .marquee__list {
+    @apply gap-2 px-1 {}
+  }
   .tab25-nav {
     @apply *:flex-1 flex items-center *:flex *:items-center *:justify-center *:text-center *:overflow-hidden {}
   }
@@ -121,5 +127,29 @@
   }
   .btn--PDownSection {
     @apply absolute right-10 bottom-14 z-10 animate-bounce {}
+  }
+  .share25 {
+    @apply flex items-center gap-3 relative {}
+  }
+  .share25-trigger {
+    @apply flex items-center gap-2 h-10 {}
+  }
+  .share25-collapse {
+    @apply flex items-center gap-3 absolute top-full right-0 p-3 pointer-events-none opacity-0 transition-all {}
+  }
+  .share25.--collapsed .share25-collapse {
+    @apply -translate-y-1.5 opacity-100 pointer-events-auto {}
+  }
+  .share25-item {
+    @apply size-9 rounded-full flex items-center justify-center transition-colors relative border {}
+  }
+  .share25-item svg {
+    @apply transition-transform group-hover:scale-110 pointer-events-none {}
+  }
+  .share25-item--link-float {
+    @apply absolute left-0 bottom-full h-fit my-auto whitespace-nowrap transition-all opacity-0 rounded-full py-1 px-2 pointer-events-none {}
+  }
+  .share25-item--link.--show .share25-item--link-float {
+    @apply -translate-y-1.5 opacity-100 {}
   }
 }
