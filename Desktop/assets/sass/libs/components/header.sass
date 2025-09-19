@@ -2,7 +2,9 @@
 
 @layer components
     .header25
-        @apply relative min-h-16
+        @apply relative
+        >.container25
+            @apply min-h-16
         &-logoBig 
             @apply inline-block align-middle my-4 relative z-10
         &-fixed 
@@ -34,3 +36,49 @@
                         @apply flex flex-wrap gap-4 py-8 *:after:content-['/'] *:after:ml-4 *:after:font-body *:last:after:hidden
                         a.active 
                             @apply text-primary after:text-black
+        &--dark
+            @apply bg-neutral-800
+            .header25
+                &-fixed 
+                    @apply bg-neutral-800/70! text-white
+                &-trending
+                    @apply bg-black border-white/30 text-white
+                    --trending-shadow: black
+                    &__inner
+                        @apply border-white/30
+                    &__title 
+                        &__icon
+                            @apply text-white
+        &-trending
+            @apply bg-white py-6
+            --trending-shadow: white
+            &__inner
+                @apply py-3 flex gap-5 border-y
+            &__title
+                @apply flex items-center gap-1
+            &__list
+                @apply flex items-center overflow-x-auto gap-3 whitespace-nowrap
+                -ms-overflow-style: none
+                scrollbar-width: none
+                &::-webkit-scrollbar
+                    display: none
+            &__wrapper
+                @apply relative overflow-hidden
+                &.mask-left::before,
+                &.mask-right::after
+                    content: ''
+                    @apply absolute inset-y-0 w-10 pointer-events-none z-1
+                &.mask-left::before
+                    left: 0
+                    background: linear-gradient(to right, var(--trending-shadow), transparent)
+                &.mask-right::after
+                    right: 0
+                    background: linear-gradient(to left, var(--trending-shadow), transparent)
+                // &.mask-left
+                //     mask-image: linear-gradient(to right, transparent 0, black calc(var(--spacing)*4))
+                // &.mask-right.mask-left
+                //     mask-image: linear-gradient(to right, transparent 0, black calc(var(--spacing)*4), black calc(100% - calc(var(--spacing)*4)),transparent 100%)
+                // &.mask-right
+                //     mask-image: linear-gradient(to left, transparent 0, black calc(var(--spacing)*4))
+            &__item
+                @apply flex items-center gap-0.5 border rounded-full py-1.5 px-3 transition-colors *:transition-colors

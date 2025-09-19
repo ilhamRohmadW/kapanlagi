@@ -160,55 +160,144 @@ window.addEventListener('load', () => {
         })
     }
 
-    var share25 = document.querySelectorAll('.share25')
+    // var share25 = document.querySelectorAll('.share25')
     
-    if(share25){
-        var sharelink = window.location.href;
-        share25.forEach(function(item){
-            item.querySelector('.share25-trigger')?.addEventListener('click', async (e)=>{
-                if (navigator.share) {
-                    try {
-                        await navigator.share({
-                            url: sharelink
-                        });
-                        console.log('Content shared successfully');
-                    } catch (error) {
-                        console.error('Error sharing content:', error);
-                    }
-                } else {
-                    item.classList.add('--collapsed')
-                }
-            })
-            item.querySelector('.share25-item--link').addEventListener('click', (e)=>{
-                if (window.isSecureContext) {
-                    navigator.clipboard.writeText(sharelink);
-                } else {
-                    const textarea = document.createElement('textarea');
-                    textarea.value = sharelink;
-                    textarea.setAttribute('readonly', '')
-                    textarea.style.cssText = "position: fixed; left: -999px;";
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textarea);
-                }
-                e.target.classList.add('--show')
-                setTimeout(() => {
-                    e.target.classList.remove('--show')
-                }, 3000);
-                e.preventDefault()
-            })
-            item.querySelector('.share25-item--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(sharelink) + "%2F&amp;src=sdkpreparse"
-            item.querySelector('.share25-item--x').href = "https://twitter.com/intent/tweet?url="+sharelink
-            item.querySelector('.share25-item--whatsapp').href = "https://wa.me/?text="+ encodeURIComponent(sharelink)
+    // if(share25){
+    //     var sharelink = window.location.href;
+    //     share25.forEach(function(item){
+    //         item.querySelector('.share25-trigger')?.addEventListener('click', async (e)=>{
+    //             if (navigator.share) {
+    //                 try {
+    //                     await navigator.share({
+    //                         url: sharelink
+    //                     });
+    //                     console.log('Content shared successfully');
+    //                 } catch (error) {
+    //                     console.error('Error sharing content:', error);
+    //                 }
+    //             } else {
+    //                 item.classList.toggle('--collapsed')
+    //             }
+    //         })
+    //         item.querySelector('.share25-item--link').addEventListener('click', (e)=>{
+    //             if (window.isSecureContext) {
+    //                 navigator.clipboard.writeText(sharelink);
+    //             } else {
+    //                 const textarea = document.createElement('textarea');
+    //                 textarea.value = sharelink;
+    //                 textarea.setAttribute('readonly', '')
+    //                 textarea.style.cssText = "position: fixed; left: -999px;";
+    //                 document.body.appendChild(textarea);
+    //                 textarea.select();
+    //                 document.execCommand('copy');
+    //                 document.body.removeChild(textarea);
+    //             }
+    //             e.target.classList.add('--show')
+    //             setTimeout(() => {
+    //                 e.target.classList.remove('--show')
+    //             }, 3000);
+    //             e.preventDefault()
+    //         })
+    //         item.querySelector('.share25-item--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(sharelink) + "%2F&amp;src=sdkpreparse"
+    //         item.querySelector('.share25-item--x').href = "https://twitter.com/intent/tweet?url="+sharelink
+    //         item.querySelector('.share25-item--whatsapp').href = "https://wa.me/?text="+ encodeURIComponent(sharelink)
 
-            // outside
-            document.addEventListener('click', function(event) {
-                if (!item.contains(event.target)) {
+    //         // outside
+    //         document.addEventListener('click', function(event) {
+    //             if (!item.contains(event.target)) {
+    //                 item.classList.remove('--collapsed')
+    //             }
+    //         });
+    //     })
+    // }
+
+    const share25 = document.querySelectorAll('.share25')
+    if(share25){
+        share25.forEach(item => {   
+            const shareBtn = item.querySelector('.share25-btn')
+            const shareCopy = item.querySelector('.share25-copy')
+            const shareCancel = item.querySelector('.share25-cancel')
+            let shareTitle = item.closest('.section').querySelector('.section--dt-title')?.textContent || '';
+            let shareUrl = window.location.href
+            // console.log(item.closest('.section').querySelector('.section--dt-title'));
+            
+            if (shareBtn) {
+                shareBtn.addEventListener('click', async() => {
+                    
+                    
+                    if (navigator.share) {
+                        try {
+                            await navigator.share({
+                                title: shareTitle,
+                                url: shareUrl // Share the current page URL
+                            });
+                            console.log('Content shared successfully!');
+                        } catch (error) {
+                            console.log(`Error sharing: ${error.message}`);
+                        }
+                    } else {
+                        console.log("Web Share API is not supported in your browser.");
+                        item.classList.toggle('--collapsed')
+                        // social media share
+                        item.querySelector('.share25-social-button--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(shareUrl) +"%2F&amp;src=sdkpreparse"
+                        item.querySelector('.share25-social-button--x').href = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(shareUrl) + "&text=" + encodeURIComponent(shareTitle)
+                        item.querySelector('.share25-social-button--whatsapp').href = "https://wa.me/?text="+ encodeURIComponent(shareTitle + " " + shareUrl)
+                        item.querySelector('.share25-social-button--telegram').href = "https://t.me/share/url?url=" + encodeURIComponent(shareUrl) + "&text="+ encodeURIComponent(shareTitle)
+                        item.querySelector('.share25-social-button--linkedin').href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl)
+                    }
+                });
+                // copy link
+                shareCopy.addEventListener('click', (e) => {
+                    console.log('copy');
+                    navigator.clipboard.writeText(shareUrl);
+                    shareCopy.querySelector('span').textContent = 'Link Copied!';
+                    setTimeout(() => {
+                        shareCopy.querySelector('span').textContent = 'Copy Link';
+                    }, 2000);
+                    e.preventDefault()
+                });
+                // click close
+                shareCancel.addEventListener('click', (e) => {
                     item.classList.remove('--collapsed')
-                }
-            });
-        })
+                    e.preventDefault()
+                })
+            }else{
+                item.querySelector('.share25-item--facebook').href = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(shareUrl) + "%2F&amp;src=sdkpreparse"
+                item.querySelector('.share25-item--x').href = "https://twitter.com/intent/tweet?url="+shareUrl
+                item.querySelector('.share25-item--whatsapp').href = "https://wa.me/?text="+ encodeURIComponent(shareUrl)
+                item.querySelector('.share25-item--link').addEventListener('click', (e)=>{
+                    if (window.isSecureContext) {
+                        navigator.clipboard.writeText(shareUrl);
+                    } else {
+                        const textarea = document.createElement('textarea');
+                        textarea.value = shareUrl;
+                        textarea.setAttribute('readonly', '')
+                        textarea.style.cssText = "position: fixed; left: -999px;";
+                        document.body.appendChild(textarea);
+                        textarea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textarea);
+                    }
+                    
+                    e.target.classList.add('--show')
+                    setTimeout(() => {
+                        e.target.classList.remove('--show')
+                    }, 3000);
+                    e.preventDefault()
+                })
+            }
+            
+            // click outside
+            // document.addEventListener('click', (e) => {
+            //     if (!item.contains(e.target)) {
+            //         item.classList.remove('--collapsed')
+            //     }
+            // });
+
+
+        });
+        console.groupEnd(); 
+        
     }
 
     const readmore25 = document.querySelectorAll(".readmore25");
@@ -327,5 +416,28 @@ window.addEventListener('load', () => {
             // applyFallback();
             // }
         });
+    }
+
+    const headerTrending = document.querySelector('.header25-trending');
+    if (headerTrending) {
+        
+        const wrapper = headerTrending.querySelector('.header25-trending__wrapper');
+        const list = headerTrending.querySelector('.header25-trending__list');
+        
+        function updateMask() {
+            const scrollLeft = list.scrollLeft;
+            const maxScroll = list.scrollWidth - list.clientWidth;
+            
+            // Toleransi pixel kecil untuk menghindari bug float
+            const atStart = scrollLeft <= 0;
+            const atEnd = scrollLeft >= maxScroll - 1;
+            
+            wrapper.classList.toggle('mask-left', !atStart);
+            wrapper.classList.toggle('mask-right', !atEnd);
+        }
+        
+        list.addEventListener('scroll', updateMask);
+        window.addEventListener('resize', updateMask);
+        updateMask();
     }
 });

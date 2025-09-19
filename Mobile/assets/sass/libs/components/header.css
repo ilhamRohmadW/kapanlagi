@@ -1,12 +1,15 @@
 @layer components {
   .header25 {
-    @apply relative min-h-16 {}
+    @apply relative {}
+  }
+  .header25 > .container25 {
+    @apply min-h-16 {}
   }
   .header25-logoBig {
     @apply inline-block align-middle mb-3 relative z-10 {}
   }
   .header25-fixed {
-    @apply absolute top-0 inset-x-0 transition h-16 {}
+    @apply absolute top-0 inset-x-0 transition h-16 shadow-md {}
   }
   .header25-fixed-navbar {
     @apply flex justify-between items-center h-full {}
@@ -46,5 +49,54 @@
   }
   .header25-collapse-main-body-nav a.active {
     @apply text-primary {}
+  }
+  .header25--dark {
+    @apply bg-neutral-800 {}
+  }
+  .header25--dark .header25-fixed {
+    @apply bg-neutral-800/70! text-white! {}
+  }
+  .header25--dark .header25-trending {
+    @apply bg-black border-white/30 text-white {}    --trending-shadow: black;
+  }
+  .header25--dark .header25-trending__inner {
+    @apply border-white/30 {}
+  }
+  .header25--dark .header25-trending__title__icon {
+    @apply text-white {}
+  }
+  .header25-trending {
+    @apply bg-white py-6 {}    --trending-shadow: white;
+  }
+  .header25-trending__inner {
+    @apply py-2.5 flex gap-3 border-y {}
+  }
+  .header25-trending__title {
+    @apply flex items-center gap-1 {}
+  }
+  .header25-trending__list {
+    @apply flex items-center overflow-x-auto gap-3 whitespace-nowrap {}    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .header25-trending__list::-webkit-scrollbar {
+    display: none;
+  }
+  .header25-trending__wrapper {
+    @apply relative overflow-hidden {}
+  }
+  .header25-trending__wrapper.mask-left::before, .header25-trending__wrapper.mask-right::after {
+    content: '';
+    @apply absolute inset-y-0 w-10 pointer-events-none z-1 {}
+  }
+  .header25-trending__wrapper.mask-left::before {
+    left: 0;
+    background: linear-gradient(to right, var(--trending-shadow), transparent);
+  }
+  .header25-trending__wrapper.mask-right::after {
+    right: 0;
+    background: linear-gradient(to left, var(--trending-shadow), transparent);
+  }
+  .header25-trending__item {
+    @apply flex items-center gap-0.5 border rounded-full py-1.5 px-3 transition-colors *:transition-colors {}
   }
 }

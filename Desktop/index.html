@@ -494,6 +494,123 @@
         </div>
 
         <!--header-->
+        <!-- <header class="header25 group" id="headerFixed"> 
+            <div class="container25">
+
+                <div class="header25-fixed transition group-[.stick]:fixed group-[.stick]:backdrop-blur-lg group-[.stick]:z-20 group-[.stick]:bg-white/70">
+                    <div class="header25-fixed-navbar container25">
+                        <h1 class="header25-navbar-logo opacity-0 transition group-[.stick]:opacity-100 group-[.off]:opacity-100"><a href="#">
+                            <img src="assets/images/logo.png" alt="image" width="200" height="40" class="object-contain h-10 object-left"></a>
+                        </h1>
+                        <div class="header25-fixed-navbar-row">
+                            <button class="header25-fixed-navbar-row-btn font-head text-xl hover:text-primary" id="hamburgerBtn" data-target-open="header25Collapse" type="button">MENU</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="header25-logoBig group-[.off]:hidden"><a href="#"><img src="assets/images/logo.png" alt="image" width="300" height="75" class="object-contain"></a></h1>
+
+                <div class="header25-collapse translate-x-full transition duration-500 group bg-fourth" id="header25Collapse">
+                    <div class="header25-collapse-main container25">
+                        <div class="header25-collapse-main-navbar bg-fourth">
+                            <a class="header25-collapse-main-navbar-logo" href="#"><img src="assets/images/logo.png" alt="image" width="150" height="30" class="object-contain"></a>
+                            <div class="header25-collapse-main-navbar-row">
+                                <button class="header25-collapse-main-navbar-row-btn font-head text-xl" id="searchBtn" data-target-open="searchCollapse" type="button">
+                                    SEARCH
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.2378 21.0631L17.6845 15.5099L15.4622 17.7322L21.0154 23.2854L23.2378 21.0631Z" fill="currentColor"/>
+                                        <ellipse cx="10.6831" cy="10.5827" rx="8.68307" ry="8.68317" stroke="black" stroke-width="3"/>
+                                    </svg>
+                                </button>
+                                <button class="header25-collapse-main-navbar-row-btn font-head text-xl" id="hamburgerBtnClose" data-target-close="header25Collapse" type="button">
+                                    CLOSE
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.68407 18.2886L18.2404 2.73223L16.0181 0.509889L0.461731 16.0662L2.68407 18.2886Z" fill="currentColor"/>
+                                        <path d="M18.2403 16.0663L2.68393 0.509905L0.461594 2.73224L16.0179 18.2886L18.2403 16.0663Z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="header25-collapse-main-navbar-search absolute transition -translate-y-full flex items-center justify-between bg-fourth gap-x-2 inset-0 border-b" id="searchCollapse" onsubmit="return performSearch();">
+                                <link rel="stylesheet" type="text/css" href="assets/sass/libs/components/gsc.css">
+                                <div class="header25-gsc">
+                                    <script async src="https://cse.google.com/cse.js?cx=001561947424278099921:ob4zpl7smv0"></script>
+                                    <script>
+                                        function updatePlaceholder() {
+                                            const input = document.querySelector('input.gsc-input');
+                                            if (input) {
+                                                input.placeholder = "Search on kapanlagi...";
+                                            }
+                                        }
+                                        window.addEventListener('load', updatePlaceholder);
+                                    </script>
+                                    <gcse:searchbox-only resultsUrl="https://search.kapanlagi.com"></gcse:searchbox-only>
+                                </div>
+                                <button type="button" class="shrink-0" id="searchbBtnClose" data-target-close="searchCollapse">
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.68407 18.2886L18.2404 2.73223L16.0181 0.509889L0.461731 16.0662L2.68407 18.2886Z" fill="currentColor"/>
+                                        <path d="M18.2403 16.0663L2.68393 0.509905L0.461594 2.73224L16.0179 18.2886L18.2403 16.0663Z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="header25-collapse-main-body">
+                            <div class="header25-collapse-main-body-nav font-head text-4xl *:hover:text-primary *:hover:after:text-black">
+                                <a href="#" class="active">Home</a>
+                                <a href="#">Artis</a>
+                                <a href="#">Hollywood</a>
+                                <a href="#">Film</a>
+                                <a href="#">Musik</a>
+                                <a href="#">Dangdut</a>
+                                <a href="#">Korea</a>
+                                <a href="#">Jepang</a>
+                                <a href="#">Foto</a>
+                                <a href="#">Kuis</a>
+                                <a href="#">Plus</a>
+                                <a href="#">Trending</a>
+                                <a href="#">Video</a>
+                            </div>
+                        </div>
+                        <div class="footer25">
+                            <div class="footer25-top font-head *:hover:text-primary">
+                                <a href="">Redaksi</a>
+                                <a href="">Disclaimer</a>
+                                <a href="">Kode Etik</a>
+                                <a href="">Provacy Policy</a>
+                                <a href="">Pedoman Media Siberi</a>
+                                <a href="">Sitemap</a>
+                            </div>
+                            <div class="footer25-row ">
+                                <div class="footer25-row-sites text-xs *:hover:underline">
+                                    <a href=""><img src="assets/images/fav-lip6.png" alt="favicon" width="16" height="16"> Liputan6.com</a>
+                                    <a href=""><img src="assets/images/fav-kl.png" alt="favicon" width="16" height="16"> Kapanlagi.com</a>
+                                    <a href=""><img src="assets/images/fav-bolanet.png" alt="favicon" width="16" height="16"> Bola.net</a>
+                                    <a href=""><img src="assets/images/fav-bolacom.png" alt="favicon" width="16" height="16"> Bola.com</a>
+                                    <a href=""><img src="assets/images/fav-merdeka.png" alt="favicon" width="16" height="16"> Merdeka.com</a>
+                                    <a href=""><img src="assets/images/fav-fimela.png" alt="favicon" width="16" height="16"> Fimela.com</a>
+                                    <a href=""><img src="assets/images/fav-dream.png" alt="favicon" width="16" height="16"> Dream.co.id</a>
+                                    <a href=""><img src="assets/images/fav-brilio.png" alt="favicon" width="16" height="16"> Brilio.net</a>
+                                    <a href=""><img src="assets/images/fav-trstdly.png" alt="favicon" width="16" height="16"> Trstdly.com</a>
+                                    <a href=""><img src="assets/images/fav-manissedap.png" alt="favicon" width="16" height="16"> Manisdansedap.com</a>
+                                </div>
+                                <div class="footer25-row-connect">
+                                    <span class="font-head text-xs">Connect with Us</span>
+                                    <div class="footer25-row-connect-list">
+                                        <a href=""><img src="assets/images/sosmed-wa.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-fb.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-x.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-ig.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-yt.png" alt="sosmed" width="24" height="24"></a>
+                                        <a href=""><img src="assets/images/sosmed-tiktok.png" alt="sosmed" width="24" height="24"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="footer25-copyright text-gray-400 text-xs font-medium">Copyright © 2025 Kapanlagi.com  KLY KapanLagi Youniverse All Right Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> -->
+        
         <header class="header25 group" id="headerFixed"> 
             <div class="container25">
 
@@ -609,8 +726,51 @@
                     </div>
                 </div>
             </div>
+            <div class="header25-trending">
+                <div class="container25">
+                    <div class="header25-trending__inner">
+                        <div class="header25-trending__title text-2xl text-secondary">
+                            <svg class="header25-trending__title__icon" width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.77566 0.320312H12.7785L9.2016 7.37352H13.1245L4.85414 18.6797L6.29062 10.1545H0.876953L4.77566 0.320312Z" fill="currentColor"/></svg>
+                            <span class="font-head">TRENDING</span>
+                        </div>
+                        <div class="header25-trending__wrapper">
+                            <div class="header25-trending__list text-xs font-semibold *:bg-fourth group-[.header25--dark]:*:bg-fourth/10 *:hover:bg-secondary *:hover:text-white group-[.group]:bg-red">
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">D ACADEMY 7</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Titiek Puspa Meninggal</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Sinetron SCTV</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">KapanlagiTalks</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Kebakaran LA</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Fun Quiz</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Avengers</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <!--end.header-->
+        
 
         <!--main-->
         <main class="main25" id="v5-container">
@@ -798,9 +958,7 @@
                     <div class="section-titleWlink">
                         <h2 class="section-titleWlink-title font-head text-5xl">VIDEO</h2>
                         <a href="" class="section-titleWlink-link font-head group hover:underline">ALL VIDEO
-                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1649 4.69529C13.0909 4.69529 11.2007 2.90883 11.2007 0.945336V0.140625H9.49931V0.945336C9.49931 2.37289 10.1611 3.71193 11.1998 4.69529H0.703125V6.30471H11.1998C10.1611 7.28807 9.49931 8.62711 9.49931 10.0547V10.8594H11.2007V10.0547C11.2007 8.09197 13.0909 6.30471 15.1649 6.30471H16.0156V4.69529H15.1649Z" fill="currentColor"/>
-                            </svg>
+                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.89047 7.14243L11.0688 5.9641L14.6055 9.49993L11.0696 13.0358L9.8913 11.8566L11.4138 10.3333H5.13297V8.6666H11.4138L9.89047 7.14243Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.3306 3.01829C19.9106 6.59829 19.9106 12.4016 16.3306 15.9816C12.7506 19.5616 6.94729 19.5616 3.36729 15.9816C-0.212706 12.4016 -0.212706 6.59829 3.36729 3.01829C6.94729 -0.561705 12.7506 -0.561705 16.3306 3.01829ZM15.1523 4.19663C16.5588 5.60316 17.349 7.51082 17.349 9.49996C17.349 11.4891 16.5588 13.3968 15.1523 14.8033C13.7458 16.2098 11.8381 17 9.84896 17C7.85982 17 5.95216 16.2098 4.54563 14.8033C3.13909 13.3968 2.34891 11.4891 2.34891 9.49996C2.34891 7.51082 3.13909 5.60316 4.54563 4.19663C5.95216 2.7901 7.85982 1.99991 9.84896 1.99991C11.8381 1.99991 13.7458 2.7901 15.1523 4.19663Z" fill="currentColor"/></svg>
                         </a>
                     </div>
                     <div class="grid2Cols">
@@ -945,9 +1103,7 @@
                                         </div>
                                         <div class="section-btnEnd">
                                             <a href="" class="section-btnEnd-link font-head hover:underline">Selengkapnya 
-                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0892 5.1529C13.0179 5.1529 11.1302 3.3688 11.1302 1.4079V0.604248H9.43105V1.4079C9.43105 2.83357 10.092 4.17084 11.1293 5.1529H0.646484V6.7602H11.1293C10.092 7.74225 9.43105 9.07952 9.43105 10.5052V11.3088H11.1302V10.5052C11.1302 8.5451 13.0179 6.7602 15.0892 6.7602H15.9388V5.1529H15.0892Z" fill="currentColor"/>
-                                                </svg>
+                                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.89047 7.14243L11.0688 5.9641L14.6055 9.49993L11.0696 13.0358L9.8913 11.8566L11.4138 10.3333H5.13297V8.6666H11.4138L9.89047 7.14243Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.3306 3.01829C19.9106 6.59829 19.9106 12.4016 16.3306 15.9816C12.7506 19.5616 6.94729 19.5616 3.36729 15.9816C-0.212706 12.4016 -0.212706 6.59829 3.36729 3.01829C6.94729 -0.561705 12.7506 -0.561705 16.3306 3.01829ZM15.1523 4.19663C16.5588 5.60316 17.349 7.51082 17.349 9.49996C17.349 11.4891 16.5588 13.3968 15.1523 14.8033C13.7458 16.2098 11.8381 17 9.84896 17C7.85982 17 5.95216 16.2098 4.54563 14.8033C3.13909 13.3968 2.34891 11.4891 2.34891 9.49996C2.34891 7.51082 3.13909 5.60316 4.54563 4.19663C5.95216 2.7901 7.85982 1.99991 9.84896 1.99991C11.8381 1.99991 13.7458 2.7901 15.1523 4.19663Z" fill="currentColor"/></svg>
                                             </a>
                                         </div>
                                     </div>
@@ -996,9 +1152,7 @@
                                         </div>
                                         <div class="section-btnEnd">
                                             <a href="" class="section-btnEnd-link font-head hover:underline">Selengkapnya 
-                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0892 5.1529C13.0179 5.1529 11.1302 3.3688 11.1302 1.4079V0.604248H9.43105V1.4079C9.43105 2.83357 10.092 4.17084 11.1293 5.1529H0.646484V6.7602H11.1293C10.092 7.74225 9.43105 9.07952 9.43105 10.5052V11.3088H11.1302V10.5052C11.1302 8.5451 13.0179 6.7602 15.0892 6.7602H15.9388V5.1529H15.0892Z" fill="currentColor"/>
-                                                </svg>
+                                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.89047 7.14243L11.0688 5.9641L14.6055 9.49993L11.0696 13.0358L9.8913 11.8566L11.4138 10.3333H5.13297V8.6666H11.4138L9.89047 7.14243Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.3306 3.01829C19.9106 6.59829 19.9106 12.4016 16.3306 15.9816C12.7506 19.5616 6.94729 19.5616 3.36729 15.9816C-0.212706 12.4016 -0.212706 6.59829 3.36729 3.01829C6.94729 -0.561705 12.7506 -0.561705 16.3306 3.01829ZM15.1523 4.19663C16.5588 5.60316 17.349 7.51082 17.349 9.49996C17.349 11.4891 16.5588 13.3968 15.1523 14.8033C13.7458 16.2098 11.8381 17 9.84896 17C7.85982 17 5.95216 16.2098 4.54563 14.8033C3.13909 13.3968 2.34891 11.4891 2.34891 9.49996C2.34891 7.51082 3.13909 5.60316 4.54563 4.19663C5.95216 2.7901 7.85982 1.99991 9.84896 1.99991C11.8381 1.99991 13.7458 2.7901 15.1523 4.19663Z" fill="currentColor"/></svg>
                                             </a>
                                         </div>
                                     </div>
@@ -1047,9 +1201,7 @@
                                         </div>
                                         <div class="section-btnEnd">
                                             <a href="" class="section-btnEnd-link font-head hover:underline">Selengkapnya 
-                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0892 5.1529C13.0179 5.1529 11.1302 3.3688 11.1302 1.4079V0.604248H9.43105V1.4079C9.43105 2.83357 10.092 4.17084 11.1293 5.1529H0.646484V6.7602H11.1293C10.092 7.74225 9.43105 9.07952 9.43105 10.5052V11.3088H11.1302V10.5052C11.1302 8.5451 13.0179 6.7602 15.0892 6.7602H15.9388V5.1529H15.0892Z" fill="currentColor"/>
-                                                </svg>
+                                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.89047 7.14243L11.0688 5.9641L14.6055 9.49993L11.0696 13.0358L9.8913 11.8566L11.4138 10.3333H5.13297V8.6666H11.4138L9.89047 7.14243Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.3306 3.01829C19.9106 6.59829 19.9106 12.4016 16.3306 15.9816C12.7506 19.5616 6.94729 19.5616 3.36729 15.9816C-0.212706 12.4016 -0.212706 6.59829 3.36729 3.01829C6.94729 -0.561705 12.7506 -0.561705 16.3306 3.01829ZM15.1523 4.19663C16.5588 5.60316 17.349 7.51082 17.349 9.49996C17.349 11.4891 16.5588 13.3968 15.1523 14.8033C13.7458 16.2098 11.8381 17 9.84896 17C7.85982 17 5.95216 16.2098 4.54563 14.8033C3.13909 13.3968 2.34891 11.4891 2.34891 9.49996C2.34891 7.51082 3.13909 5.60316 4.54563 4.19663C5.95216 2.7901 7.85982 1.99991 9.84896 1.99991C11.8381 1.99991 13.7458 2.7901 15.1523 4.19663Z" fill="currentColor"/></svg>
                                             </a>
                                         </div>
                                     </div>

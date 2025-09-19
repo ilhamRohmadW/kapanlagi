@@ -492,13 +492,13 @@
         </div>
 
         <!--header-->
-        <header class="header25 header25--movie group off" id="headerFixed"> 
+        <header class="header25 header25--dark group off" id="headerFixed"> 
             <div class="container25">
 
                 <div class="header25-fixed transition group-[.stick]:fixed group-[.stick]:backdrop-blur-lg group-[.stick]:z-20 group-[.stick]:bg-white/70">
                     <div class="header25-fixed-navbar container25">
                         <h1 class="header25-navbar-logo opacity-0 transition group-[.stick]:opacity-100 group-[.off]:opacity-100"><a href="#">
-                            <img src="assets/images/movie/logomovie.png" alt="image" width="200" height="40" class="object-contain h-10 object-left"></a>
+                            <img src="assets/images/logo.png" alt="image" width="200" height="40" class="object-contain h-10 object-left" style="filter: invert(1) brightness(100);"></a>
                         </h1>
                         <div class="header25-fixed-navbar-row">
                             <button class="header25-fixed-navbar-row-btn font-head text-xl hover:text-primary" id="hamburgerBtn" data-target-open="header25Collapse" type="button">MENU</button>
@@ -506,7 +506,7 @@
                     </div>
                 </div>
 
-                <h1 class="header25-logoBig group-[.off]:hidden"><a href="#"><img src="assets/images/logo.png" alt="image" width="400" height="100" class="object-contain"></a></h1>
+                <h1 class="header25-logoBig group-[.off]:hidden"><a href="#"><img src="assets/images/logo.png" alt="image" width="300" height="75" class="object-contain"></a></h1>
 
                 <div class="header25-collapse translate-x-full transition duration-500 group bg-fourth" id="header25Collapse">
                     <div class="header25-collapse-main container25">
@@ -544,9 +544,9 @@
                                     <gcse:searchbox-only resultsUrl="https://search.kapanlagi.com"></gcse:searchbox-only>
                                 </div>
                                 <button type="button" class="shrink-0" id="searchbBtnClose" data-target-close="searchCollapse">
-                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.2714 20.2728L19.9993 7.54489L18.181 5.72661L5.45312 18.4545L7.2714 20.2728Z" fill="currentColor"/>
-                                        <path d="M19.9999 18.4545L7.27199 5.7266L5.45372 7.54488L18.1816 20.2728L19.9999 18.4545Z" fill="currentColor"/>
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.68407 18.2886L18.2404 2.73223L16.0181 0.509889L0.461731 16.0662L2.68407 18.2886Z" fill="currentColor"/>
+                                        <path d="M18.2403 16.0663L2.68393 0.509905L0.461594 2.73224L16.0179 18.2886L18.2403 16.0663Z" fill="currentColor"/>
                                     </svg>
                                 </button>
                             </form>
@@ -607,6 +607,49 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="header25-trending">
+                <div class="container25">
+                    <div class="header25-trending__inner">
+                        <div class="header25-trending__title text-2xl text-secondary">
+                            <svg class="header25-trending__title__icon" width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.77566 0.320312H12.7785L9.2016 7.37352H13.1245L4.85414 18.6797L6.29062 10.1545H0.876953L4.77566 0.320312Z" fill="currentColor"/></svg>
+                            <span class="font-head">TRENDING</span>
+                        </div>
+                        <div class="header25-trending__wrapper">
+                            <div class="header25-trending__list text-xs font-semibold *:bg-fourth group-[.header25--dark]:*:bg-fourth/10 *:hover:bg-secondary *:hover:text-white group-[.group]:bg-red">
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">D ACADEMY 7</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Titiek Puspa Meninggal</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Sinetron SCTV</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">KapanlagiTalks</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Kebakaran LA</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Fun Quiz</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                                <a href="#" class="header25-trending__item group/trending">
+                                    <span class="header25-trending__item__title">Avengers</span>
+                                    <svg class="text-secondary group-hover/trending:text-white" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33268 0L9.67435 1.34167L6.81602 4.2L4.48268 1.86667L0.166016 6.18333L0.982682 7L4.48268 3.5L6.81602 5.83333L10.491 2.15833L11.8327 3.5V0H8.33268Z" fill="currentColor"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <!--end.header-->
 
@@ -614,12 +657,10 @@
         <main class="main25" id="v5-container">
 
 
-            <section class="section--dt">
-                <div class="section--dt-headline bg-fifth text-white mb-12">
+            <section class="section section--dt">
+                <div class="section--dt-headline bg-black text-white">
                     <div class="container25">
-                        <div class="section--dt-headline-row flex justify-between items-start gap-6 pt-12 pb-24 *:relative
-                        before:bg-gradient-to-t before:from-fifth before:from-60% before:to-fifth/60 before:absolute before:inset-0 before:backdrop-blur-md before:pointer-events-none"
-                        style="background-image: url('assets/images/detail.png');">
+                        <div class="section--dt-headline-row *:relative">
                             <div class="section--dt-headline-left">
                                 <nav class="section--dt-breadcrumb text-xs">
                                     <a href="">Home</a>
@@ -632,34 +673,30 @@
                                     <div class="editor">
                                         <span class="editor-image bg-gradient-to-r from-secondary to-pink-700 text-white">E</span>
                                         <div class="editor-detail">
-                                            <span class="editor-name font-bold">Editor Kapanlagi</span>
-                                            <span class="editor-date text-xs">Rabu, 6 Agustus 2025 11:21 WIB</span>
+                                            <span class="editor-name text-xs font-bold">Editor Kapanlagi</span>
+                                            <span class="editor-date text-[10px]">Rabu, 6 Agustus 2025 11:21 WIB</span>
                                         </div>
                                     </div>
-                                    <div class="share25">
-                                        <button class="share25-trigger font-head text-lg">
-                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.59009 14.01L15.4201 17.99M15.4101 7.01001L8.59009 10.99M21 5.5C21 7.15685 19.6569 8.5 18 8.5C16.3431 8.5 15 7.15685 15 5.5C15 3.84315 16.3431 2.5 18 2.5C19.6569 2.5 21 3.84315 21 5.5ZM9 12.5C9 14.1569 7.65685 15.5 6 15.5C4.34315 15.5 3 14.1569 3 12.5C3 10.8431 4.34315 9.5 6 9.5C7.65685 9.5 9 10.8431 9 12.5ZM21 19.5C21 21.1569 19.6569 22.5 18 22.5C16.3431 22.5 15 21.1569 15 19.5C15 17.8431 16.3431 16.5 18 16.5C19.6569 16.5 21 17.8431 21 19.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                            <span>SHARE</span>
-                                        </button>
-                                        <div class="share25-collapse bg-fifth text-white">
-                                            <a href="" target="_blank" class="share25-item share25-item--facebook group border-white hover:bg-white hover:text-black">
-                                                <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.0843 14.8247V8.43912H7.22682L7.54826 5.9498H5.0843V4.36074C5.0843 3.64025 5.28355 3.14924 6.3179 3.14924L7.63498 3.1487V0.922168C7.40721 0.892569 6.62536 0.824707 5.71536 0.824707C3.81514 0.824707 2.51422 1.98458 2.51422 4.1142V5.9498H0.365204V8.43912H2.51422V14.8247H5.0843Z" fill="currentColor"/></svg>
-                                            </a>
-                                            <a href="" target="_blank" class="share25-item share25-item--x group border-white hover:bg-white hover:text-black">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21028 5.82932L12.9458 0.324707H11.8236L7.71179 5.10428L4.42769 0.324707H0.639877L5.60608 7.55228L0.639877 13.3247H1.7621L6.10428 8.27731L9.57253 13.3247H13.3603L8.21001 5.82932H8.21028ZM6.67325 7.61595L6.17007 6.89625L2.16645 1.16949H3.89012L7.12108 5.79117L7.62426 6.51087L11.8241 12.5183H10.1005L6.67325 7.61623V7.61595Z" fill="currentColor"/></svg>
-                                            </a>
-                                            <a href="" class="share25-item share25-item--link group border-white hover:bg-white hover:text-black">
-                                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.21433 6.11482C7.10804 5.00853 5.23756 5.05044 4.03909 6.24968L1.07604 9.21272C-0.123199 10.4112 -0.165103 12.2817 0.941182 13.388C2.04747 14.4942 3.91794 14.4523 5.11642 13.2531L6.59833 11.772C6.6514 11.7189 6.69351 11.6559 6.72224 11.5865C6.75096 11.5172 6.76575 11.4428 6.76575 11.3678C6.76575 11.2927 6.75096 11.2184 6.72224 11.149C6.69351 11.0797 6.6514 11.0167 6.59833 10.9636C6.54525 10.9105 6.48223 10.8684 6.41288 10.8397C6.34353 10.8109 6.2692 10.7962 6.19414 10.7962C6.11907 10.7962 6.04474 10.8109 5.97539 10.8397C5.90604 10.8684 5.84302 10.9105 5.78994 10.9636L4.30804 12.4455C3.5728 13.1807 2.42842 13.2584 1.74956 12.5796C1.07071 11.9007 1.14842 10.7563 1.88366 10.0211L4.84671 7.05806C5.58271 6.32206 6.72709 6.24434 7.40595 6.9232C7.51314 7.0304 7.65853 7.09062 7.81014 7.09062C7.96174 7.09062 8.10713 7.0304 8.21433 6.9232C8.32152 6.816 8.38175 6.67061 8.38175 6.51901C8.38175 6.36741 8.32152 6.22202 8.21433 6.11482Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.25144 9.07778C5.78725 9.61353 6.51392 9.9145 7.27163 9.9145C8.02933 9.9145 8.75601 9.61353 9.29182 9.07778L12.5246 5.84578C13.0598 5.30954 13.3604 4.58285 13.3604 3.82521C13.3604 3.06756 13.0598 2.34087 12.5246 1.80463C12.2593 1.53924 11.9443 1.32872 11.5976 1.18509C11.2509 1.04146 10.8793 0.967529 10.504 0.967529C10.1287 0.967529 9.75715 1.04146 9.41045 1.18509C9.06376 1.32872 8.74876 1.53924 8.48344 1.80463L6.86744 3.4214C6.7633 3.52912 6.70563 3.67344 6.70686 3.82326C6.70809 3.97309 6.76812 4.11644 6.87402 4.22244C6.97992 4.32844 7.12321 4.3886 7.27304 4.38998C7.42286 4.39135 7.56724 4.33382 7.67506 4.22978L9.29182 2.61301C9.61331 2.29152 10.0493 2.11091 10.504 2.11091C10.9587 2.11091 11.3947 2.29152 11.7162 2.61301C12.0377 2.93451 12.2183 3.37055 12.2183 3.82521C12.2183 4.27986 12.0377 4.7159 11.7162 5.0374L8.48344 8.27016C8.16175 8.59128 7.72578 8.77164 7.27125 8.77164C6.81671 8.77164 6.38075 8.59128 6.05906 8.27016C6.00603 8.21713 5.94307 8.17506 5.87379 8.14637C5.8045 8.11767 5.73024 8.10289 5.65525 8.10289C5.58025 8.10289 5.50599 8.11767 5.43671 8.14637C5.36742 8.17506 5.30447 8.21713 5.25144 8.27016C5.19841 8.32319 5.15634 8.38614 5.12765 8.45543C5.09895 8.52471 5.08418 8.59897 5.08418 8.67397C5.08418 8.74896 5.09895 8.82322 5.12765 8.89251C5.15634 8.96179 5.19841 9.02475 5.25144 9.07778Z" fill="currentColor"/></svg>
-                                                <span class="share25-item--link-float text-xs bg-neutral-700 text-white">Link Copied!</span>
-                                            </a>
-                                            <a href="" target="_blank" class="share25-item share25-item--whatsapp group border-white hover:bg-white hover:text-black">
-                                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9602 2.86904C10.6442 1.55144 8.89391 0.825476 7.02927 0.824707C3.18704 0.824707 0.0600059 3.95165 0.0584673 7.79491C0.0579398 9.0235 0.378873 10.2228 0.988911 11.2799L0 14.892L3.69533 13.9227C4.71354 14.4781 5.85988 14.7708 7.02643 14.7711H7.02938C10.8712 14.7711 13.9985 11.644 14 7.8005C14.0008 5.93785 13.2764 4.18658 11.9602 2.86904ZM7.02927 13.5939H7.02685C5.98727 13.5934 4.96768 13.3141 4.07799 12.7863L3.86654 12.6607L1.67366 13.2359L2.25895 11.0979L2.12113 10.8787C1.54116 9.95625 1.23489 8.89005 1.23542 7.79533C1.23663 4.6009 3.83579 2.00201 7.0316 2.00201C8.57913 2.00252 10.0339 2.60594 11.1277 3.70108C12.2216 4.79622 12.8236 6.2519 12.8231 7.80006C12.8218 10.9947 10.2228 13.5939 7.02927 13.5939ZM10.2073 9.25459C10.0332 9.16738 9.1768 8.74615 9.01709 8.68795C8.85756 8.62981 8.7413 8.60086 8.62531 8.77516C8.50915 8.94947 8.1754 9.34184 8.07374 9.458C7.97209 9.57428 7.8706 9.58885 7.69639 9.50163C7.52219 9.41448 6.961 9.23048 6.29568 8.6371C5.77793 8.17526 5.42841 7.60489 5.32675 7.43061C5.22526 7.25613 5.32587 7.17096 5.40315 7.07513C5.5917 6.84099 5.78051 6.59552 5.83856 6.47935C5.89667 6.36308 5.86757 6.26135 5.82396 6.1742C5.78051 6.08705 5.43219 5.22974 5.28707 4.88089C5.14559 4.5414 5.0021 4.58723 4.89512 4.58194C4.79364 4.57686 4.67747 4.57582 4.56131 4.57582C4.44521 4.57582 4.25649 4.61935 4.0968 4.79382C3.93718 4.96822 3.48729 5.38953 3.48729 6.24685C3.48729 7.10416 4.1114 7.93235 4.19846 8.04861C4.2855 8.16488 5.42669 9.92413 7.17385 10.6785C7.58941 10.8581 7.91379 10.9652 8.16683 11.0455C8.5841 11.178 8.9637 11.1593 9.26386 11.1145C9.59853 11.0644 10.2943 10.6931 10.4395 10.2863C10.5847 9.87943 10.5847 9.53073 10.541 9.458C10.4976 9.38538 10.3814 9.34184 10.2073 9.25459Z" fill="currentColor"/></svg>
-                                            </a>
-                                        </div>
+                                    <div class="share25 gap-2">
+                                        <span class="font-head text-lg">SHARE</span>
+                                        <a href="" target="_blank" class="share25-item share25-item--facebook group border-white hover:bg-white hover:text-black">
+                                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.0843 14.8247V8.43912H7.22682L7.54826 5.9498H5.0843V4.36074C5.0843 3.64025 5.28355 3.14924 6.3179 3.14924L7.63498 3.1487V0.922168C7.40721 0.892569 6.62536 0.824707 5.71536 0.824707C3.81514 0.824707 2.51422 1.98458 2.51422 4.1142V5.9498H0.365204V8.43912H2.51422V14.8247H5.0843Z" fill="currentColor"/></svg>
+                                        </a>
+                                        <a href="" target="_blank" class="share25-item share25-item--x group border-white hover:bg-white hover:text-black">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21028 5.82932L12.9458 0.324707H11.8236L7.71179 5.10428L4.42769 0.324707H0.639877L5.60608 7.55228L0.639877 13.3247H1.7621L6.10428 8.27731L9.57253 13.3247H13.3603L8.21001 5.82932H8.21028ZM6.67325 7.61595L6.17007 6.89625L2.16645 1.16949H3.89012L7.12108 5.79117L7.62426 6.51087L11.8241 12.5183H10.1005L6.67325 7.61623V7.61595Z" fill="currentColor"/></svg>
+                                        </a>
+                                        <a href="" class="share25-item share25-item--link group border-white hover:bg-white hover:text-black">
+                                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.21433 6.11482C7.10804 5.00853 5.23756 5.05044 4.03909 6.24968L1.07604 9.21272C-0.123199 10.4112 -0.165103 12.2817 0.941182 13.388C2.04747 14.4942 3.91794 14.4523 5.11642 13.2531L6.59833 11.772C6.6514 11.7189 6.69351 11.6559 6.72224 11.5865C6.75096 11.5172 6.76575 11.4428 6.76575 11.3678C6.76575 11.2927 6.75096 11.2184 6.72224 11.149C6.69351 11.0797 6.6514 11.0167 6.59833 10.9636C6.54525 10.9105 6.48223 10.8684 6.41288 10.8397C6.34353 10.8109 6.2692 10.7962 6.19414 10.7962C6.11907 10.7962 6.04474 10.8109 5.97539 10.8397C5.90604 10.8684 5.84302 10.9105 5.78994 10.9636L4.30804 12.4455C3.5728 13.1807 2.42842 13.2584 1.74956 12.5796C1.07071 11.9007 1.14842 10.7563 1.88366 10.0211L4.84671 7.05806C5.58271 6.32206 6.72709 6.24434 7.40595 6.9232C7.51314 7.0304 7.65853 7.09062 7.81014 7.09062C7.96174 7.09062 8.10713 7.0304 8.21433 6.9232C8.32152 6.816 8.38175 6.67061 8.38175 6.51901C8.38175 6.36741 8.32152 6.22202 8.21433 6.11482Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.25144 9.07778C5.78725 9.61353 6.51392 9.9145 7.27163 9.9145C8.02933 9.9145 8.75601 9.61353 9.29182 9.07778L12.5246 5.84578C13.0598 5.30954 13.3604 4.58285 13.3604 3.82521C13.3604 3.06756 13.0598 2.34087 12.5246 1.80463C12.2593 1.53924 11.9443 1.32872 11.5976 1.18509C11.2509 1.04146 10.8793 0.967529 10.504 0.967529C10.1287 0.967529 9.75715 1.04146 9.41045 1.18509C9.06376 1.32872 8.74876 1.53924 8.48344 1.80463L6.86744 3.4214C6.7633 3.52912 6.70563 3.67344 6.70686 3.82326C6.70809 3.97309 6.76812 4.11644 6.87402 4.22244C6.97992 4.32844 7.12321 4.3886 7.27304 4.38998C7.42286 4.39135 7.56724 4.33382 7.67506 4.22978L9.29182 2.61301C9.61331 2.29152 10.0493 2.11091 10.504 2.11091C10.9587 2.11091 11.3947 2.29152 11.7162 2.61301C12.0377 2.93451 12.2183 3.37055 12.2183 3.82521C12.2183 4.27986 12.0377 4.7159 11.7162 5.0374L8.48344 8.27016C8.16175 8.59128 7.72578 8.77164 7.27125 8.77164C6.81671 8.77164 6.38075 8.59128 6.05906 8.27016C6.00603 8.21713 5.94307 8.17506 5.87379 8.14637C5.8045 8.11767 5.73024 8.10289 5.65525 8.10289C5.58025 8.10289 5.50599 8.11767 5.43671 8.14637C5.36742 8.17506 5.30447 8.21713 5.25144 8.27016C5.19841 8.32319 5.15634 8.38614 5.12765 8.45543C5.09895 8.52471 5.08418 8.59897 5.08418 8.67397C5.08418 8.74896 5.09895 8.82322 5.12765 8.89251C5.15634 8.96179 5.19841 9.02475 5.25144 9.07778Z" fill="currentColor"/></svg>
+                                            <span class="share25-item--link-float text-xs bg-neutral-700 text-white">Link Copied!</span>
+                                        </a>
+                                        <a href="" target="_blank" class="share25-item share25-item--whatsapp group border-white hover:bg-white hover:text-black">
+                                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9602 2.86904C10.6442 1.55144 8.89391 0.825476 7.02927 0.824707C3.18704 0.824707 0.0600059 3.95165 0.0584673 7.79491C0.0579398 9.0235 0.378873 10.2228 0.988911 11.2799L0 14.892L3.69533 13.9227C4.71354 14.4781 5.85988 14.7708 7.02643 14.7711H7.02938C10.8712 14.7711 13.9985 11.644 14 7.8005C14.0008 5.93785 13.2764 4.18658 11.9602 2.86904ZM7.02927 13.5939H7.02685C5.98727 13.5934 4.96768 13.3141 4.07799 12.7863L3.86654 12.6607L1.67366 13.2359L2.25895 11.0979L2.12113 10.8787C1.54116 9.95625 1.23489 8.89005 1.23542 7.79533C1.23663 4.6009 3.83579 2.00201 7.0316 2.00201C8.57913 2.00252 10.0339 2.60594 11.1277 3.70108C12.2216 4.79622 12.8236 6.2519 12.8231 7.80006C12.8218 10.9947 10.2228 13.5939 7.02927 13.5939ZM10.2073 9.25459C10.0332 9.16738 9.1768 8.74615 9.01709 8.68795C8.85756 8.62981 8.7413 8.60086 8.62531 8.77516C8.50915 8.94947 8.1754 9.34184 8.07374 9.458C7.97209 9.57428 7.8706 9.58885 7.69639 9.50163C7.52219 9.41448 6.961 9.23048 6.29568 8.6371C5.77793 8.17526 5.42841 7.60489 5.32675 7.43061C5.22526 7.25613 5.32587 7.17096 5.40315 7.07513C5.5917 6.84099 5.78051 6.59552 5.83856 6.47935C5.89667 6.36308 5.86757 6.26135 5.82396 6.1742C5.78051 6.08705 5.43219 5.22974 5.28707 4.88089C5.14559 4.5414 5.0021 4.58723 4.89512 4.58194C4.79364 4.57686 4.67747 4.57582 4.56131 4.57582C4.44521 4.57582 4.25649 4.61935 4.0968 4.79382C3.93718 4.96822 3.48729 5.38953 3.48729 6.24685C3.48729 7.10416 4.1114 7.93235 4.19846 8.04861C4.2855 8.16488 5.42669 9.92413 7.17385 10.6785C7.58941 10.8581 7.91379 10.9652 8.16683 11.0455C8.5841 11.178 8.9637 11.1593 9.26386 11.1145C9.59853 11.0644 10.2943 10.6931 10.4395 10.2863C10.5847 9.87943 10.5847 9.53073 10.541 9.458C10.4976 9.38538 10.3814 9.34184 10.2073 9.25459Z" fill="currentColor"/></svg>
+                                        </a>
                                     </div>
+
                                 </div>
                             </div>
-                            <div class="section--dt-headline-right min-w-lg">
+                            <div class="section--dt-headline-right">
                                 <div class="section--dt-image">
                                     <figure class="section--dt-image-figure">
                                         <img src="assets/images/detail.png" class="w-full h-full object-cover" width="640" height="335" alt="Sample Image">
@@ -682,7 +719,7 @@
                                             <p>Di balik rasa bangganya yang luar biasa, Ibnu jujur mengakui kalau ia tidak terlalu tahu menahu soal persiapan sang anak dan baru mengetahuinya di tengah jalan karena sifat Dhofin yang cenderung tertutup.</p>
                                             <p>Suami Ririn Ekawati ini mengaku perasaannya benar-benar campur aduk. Ia merasa sangat bangga karena tahu betul betapa beratnya perjuangan untuk bisa sampai ke titik itu.</p>
                                             <p>"Karena dari berapa ribu terpilih 1200-an angkatan darat. Kalo nggak salah anak saya angkatan darat ada sekitar 700-an. Saya sih nggak tau angka pastinya, tapi yang jelas Alhamdulillah peringkatnya tidak mengecewakan," katanya.</p>
-                                            <a href="" class="crosslink border-black bg-fourth p-4 font-bold hover:text-primary">5 Seleb Hadir Bersama Mantan di Acara Kelulusan Sekolah Anak, Akur dan Tampil Kompak
+                                            <a href="" class="crosslink border-black bg-fourth font-bold hover:text-primary">5 Seleb Hadir Bersama Mantan di Acara Kelulusan Sekolah Anak, Akur dan Tampil Kompak
                                                 <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.8889 5.94895C16.18 5.94895 13.7111 3.61562 13.7111 1.05105V0H11.4889V1.05105C11.4889 2.91562 12.3533 4.66456 13.71 5.94895H0V8.05105H13.71C12.3533 9.33544 11.4889 11.0844 11.4889 12.9489V14H13.7111V12.9489C13.7111 10.3854 16.18 8.05105 18.8889 8.05105H20V5.94895H18.8889Z" fill="black"/></svg>
                                             </a>
                                         </div>
@@ -699,7 +736,7 @@
                                             <p>Di balik rasa bangganya yang luar biasa, Ibnu jujur mengakui kalau ia tidak terlalu tahu menahu soal persiapan sang anak dan baru mengetahuinya di tengah jalan karena sifat Dhofin yang cenderung tertutup.</p>
                                             <p>Suami Ririn Ekawati ini mengaku perasaannya benar-benar campur aduk. Ia merasa sangat bangga karena tahu betul betapa beratnya perjuangan untuk bisa sampai ke titik itu.</p>
                                             <p>"Karena dari berapa ribu terpilih 1200-an angkatan darat. Kalo nggak salah anak saya angkatan darat ada sekitar 700-an. Saya sih nggak tau angka pastinya, tapi yang jelas Alhamdulillah peringkatnya tidak mengecewakan," katanya.</p>
-                                            <a href="" class="crosslink border-black bg-fourth p-4 font-bold hover:text-primary">5 Seleb Hadir Bersama Mantan di Acara Kelulusan Sekolah Anak, Akur dan Tampil Kompak
+                                            <a href="" class="crosslink border-black bg-fourth font-bold hover:text-primary">5 Seleb Hadir Bersama Mantan di Acara Kelulusan Sekolah Anak, Akur dan Tampil Kompak
                                                 <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.8889 5.94895C16.18 5.94895 13.7111 3.61562 13.7111 1.05105V0H11.4889V1.05105C11.4889 2.91562 12.3533 4.66456 13.71 5.94895H0V8.05105H13.71C12.3533 9.33544 11.4889 11.0844 11.4889 12.9489V14H13.7111V12.9489C13.7111 10.3854 16.18 8.05105 18.8889 8.05105H20V5.94895H18.8889Z" fill="black"/></svg>
                                             </a>
                                             <p>Meskipun nanti bakal jarang ketemu karena Dhofin harus menjalani pendidikan militer, Ibnu sama sekali tak merasa takut atau khawatir. Baginya, dukungan penuh adalah hal yang utama, dan ia merasa sangat bangga dengan pencapaian putranya yang berhasil lolos, bukan sekadar lulus.</p>
@@ -723,7 +760,7 @@
                                         <div class="section--dt-row-title italic">
                                             <span>Editor Kapanlagi</span>
                                         </div>
-                                        <div class="share25">
+                                        <!-- <div class="share25">
                                             <button class="share25-trigger font-head">
                                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.59009 14.01L15.4201 17.99M15.4101 7.01001L8.59009 10.99M21 5.5C21 7.15685 19.6569 8.5 18 8.5C16.3431 8.5 15 7.15685 15 5.5C15 3.84315 16.3431 2.5 18 2.5C19.6569 2.5 21 3.84315 21 5.5ZM9 12.5C9 14.1569 7.65685 15.5 6 15.5C4.34315 15.5 3 14.1569 3 12.5C3 10.8431 4.34315 9.5 6 9.5C7.65685 9.5 9 10.8431 9 12.5ZM21 19.5C21 21.1569 19.6569 22.5 18 22.5C16.3431 22.5 15 21.1569 15 19.5C15 17.8431 16.3431 16.5 18 16.5C19.6569 16.5 21 17.8431 21 19.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                                 <span>SHARE</span>
@@ -743,7 +780,46 @@
                                                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9602 2.86904C10.6442 1.55144 8.89391 0.825476 7.02927 0.824707C3.18704 0.824707 0.0600059 3.95165 0.0584673 7.79491C0.0579398 9.0235 0.378873 10.2228 0.988911 11.2799L0 14.892L3.69533 13.9227C4.71354 14.4781 5.85988 14.7708 7.02643 14.7711H7.02938C10.8712 14.7711 13.9985 11.644 14 7.8005C14.0008 5.93785 13.2764 4.18658 11.9602 2.86904ZM7.02927 13.5939H7.02685C5.98727 13.5934 4.96768 13.3141 4.07799 12.7863L3.86654 12.6607L1.67366 13.2359L2.25895 11.0979L2.12113 10.8787C1.54116 9.95625 1.23489 8.89005 1.23542 7.79533C1.23663 4.6009 3.83579 2.00201 7.0316 2.00201C8.57913 2.00252 10.0339 2.60594 11.1277 3.70108C12.2216 4.79622 12.8236 6.2519 12.8231 7.80006C12.8218 10.9947 10.2228 13.5939 7.02927 13.5939ZM10.2073 9.25459C10.0332 9.16738 9.1768 8.74615 9.01709 8.68795C8.85756 8.62981 8.7413 8.60086 8.62531 8.77516C8.50915 8.94947 8.1754 9.34184 8.07374 9.458C7.97209 9.57428 7.8706 9.58885 7.69639 9.50163C7.52219 9.41448 6.961 9.23048 6.29568 8.6371C5.77793 8.17526 5.42841 7.60489 5.32675 7.43061C5.22526 7.25613 5.32587 7.17096 5.40315 7.07513C5.5917 6.84099 5.78051 6.59552 5.83856 6.47935C5.89667 6.36308 5.86757 6.26135 5.82396 6.1742C5.78051 6.08705 5.43219 5.22974 5.28707 4.88089C5.14559 4.5414 5.0021 4.58723 4.89512 4.58194C4.79364 4.57686 4.67747 4.57582 4.56131 4.57582C4.44521 4.57582 4.25649 4.61935 4.0968 4.79382C3.93718 4.96822 3.48729 5.38953 3.48729 6.24685C3.48729 7.10416 4.1114 7.93235 4.19846 8.04861C4.2855 8.16488 5.42669 9.92413 7.17385 10.6785C7.58941 10.8581 7.91379 10.9652 8.16683 11.0455C8.5841 11.178 8.9637 11.1593 9.26386 11.1145C9.59853 11.0644 10.2943 10.6931 10.4395 10.2863C10.5847 9.87943 10.5847 9.53073 10.541 9.458C10.4976 9.38538 10.3814 9.34184 10.2073 9.25459Z" fill="currentColor"/></svg>
                                                 </a>
                                             </div>
+                                        </div> -->
+
+                                        <div class="share25 group/share">
+                                            <div class="share25-btn group-[.--collapsed]/share:text-primary">
+                                                <div class="share25-btn-icon">
+                                                    <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.8994 19.7002C19.8994 18.4299 18.8699 17.4004 17.5996 17.4004C16.7961 17.4004 16.089 17.8122 15.6777 18.4365C15.6622 18.4722 15.6461 18.5085 15.626 18.543C15.6059 18.5774 15.582 18.6086 15.5586 18.6396C15.3934 18.957 15.2998 19.3177 15.2998 19.7002C15.2999 20.9704 16.3294 22 17.5996 22C18.8698 22 19.8993 20.9704 19.8994 19.7002ZM6.69922 12C6.69922 10.7297 5.66967 9.7002 4.39941 9.7002C3.12925 9.7003 2.09961 10.7298 2.09961 12C2.09961 13.2702 3.12925 14.2997 4.39941 14.2998C5.66967 14.2998 6.69922 13.2703 6.69922 12ZM19.8994 4.2998C19.8993 3.02964 18.8698 2 17.5996 2C16.3294 2 15.2999 3.02964 15.2998 4.2998C15.2998 5.57006 16.3294 6.59961 17.5996 6.59961C18.8699 6.59961 19.8994 5.57006 19.8994 4.2998ZM21.8994 4.2998C21.8994 6.67463 19.9744 8.59961 17.5996 8.59961C16.3769 8.59961 15.2742 8.08885 14.4912 7.26953L8.51562 10.7568C8.63437 11.1505 8.69922 11.5676 8.69922 12C8.69922 12.4321 8.6342 12.8488 8.51562 13.2422L14.4951 16.7256C15.2778 15.9089 16.3791 15.4004 17.5996 15.4004C19.9744 15.4004 21.8994 17.3254 21.8994 19.7002C21.8993 22.0749 19.9744 24 17.5996 24C15.2248 24 13.2999 22.0749 13.2998 19.7002C13.2998 19.2662 13.3638 18.8471 13.4834 18.4521L7.50781 14.9697C6.72488 15.7889 5.62206 16.2998 4.39941 16.2998C2.02468 16.2997 0.0996094 14.3748 0.0996094 12C0.0996095 9.62524 2.02468 7.7003 4.39941 7.7002C5.6218 7.7002 6.72491 8.21039 7.50781 9.0293L13.4824 5.54297C13.3638 5.14943 13.2998 4.73203 13.2998 4.2998C13.2999 1.92507 15.2248 0 17.5996 0C19.9744 1.25628e-06 21.8993 1.92507 21.8994 4.2998Z" fill="currentColor"/></svg>
+                                                </div>
+                                                <span class="font-head">SHARE</span>
+                                            </div>
+                                            <div class="share25-dropdown bg-white text-black font-medium text-xs shadow-[0_10px_40px_10px_rgba(0,0,0,0.16)]">
+                                                <div class="share25-dropdown-content">
+                                                    <div class="share25-social">
+                                                        <a href="#" target="_blank" class="share25-social-button share25-social-button--facebook">
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.665 17.9166H10.9983V11.2416H14.0017L14.3317 7.92498H10.9983V6.24998C10.9983 6.02897 11.0861 5.817 11.2424 5.66072C11.3987 5.50444 11.6107 5.41665 11.8317 5.41665H14.3317V2.08331H11.8317C10.7266 2.08331 9.66679 2.5223 8.88539 3.3037C8.10399 4.0851 7.665 5.14491 7.665 6.24998V7.92498H5.99833L5.66833 11.2416H7.665V17.9166Z" fill="currentColor"></path></svg>
+                                                        </a>
+                                                        <a href="#" target="_blank" class="share25-social-button share25-social-button--whatsapp">
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66669C5.39746 1.66669 1.66663 5.39752 1.66663 10C1.66663 11.575 2.10413 13.05 2.86496 14.3067L2.12163 16.8334C2.07895 16.9784 2.07614 17.1323 2.1135 17.2788C2.15085 17.4254 2.227 17.5591 2.33393 17.6661C2.44085 17.773 2.57461 17.8491 2.72114 17.8865C2.86767 17.9238 3.02156 17.921 3.16663 17.8784L5.69329 17.135C6.99224 17.9208 8.48183 18.3353 9.99996 18.3334C14.6025 18.3334 18.3333 14.6025 18.3333 10C18.3333 5.39752 14.6025 1.66669 9.99996 1.66669ZM8.11496 11.8859C9.80079 13.5709 11.41 13.7934 11.9783 13.8142C12.8425 13.8459 13.6841 13.1859 14.0116 12.42C14.0526 12.3247 14.0674 12.2201 14.0545 12.1171C14.0417 12.0142 14.0015 11.9165 13.9383 11.8342C13.4816 11.2509 12.8641 10.8317 12.2608 10.415C12.1349 10.3277 11.98 10.2927 11.8288 10.3172C11.6776 10.3418 11.5418 10.424 11.45 10.5467L10.95 11.3092C10.9235 11.35 10.8826 11.3793 10.8354 11.391C10.7882 11.4028 10.7383 11.3962 10.6958 11.3725C10.3566 11.1784 9.86246 10.8484 9.50746 10.4934C9.15246 10.1384 8.84246 9.66669 8.66829 9.34919C8.64722 9.30873 8.64127 9.26209 8.6515 9.21764C8.66174 9.1732 8.68749 9.13385 8.72413 9.10669L9.49413 8.53502C9.60433 8.43968 9.67548 8.30703 9.69393 8.16248C9.71239 8.01793 9.67685 7.87165 9.59413 7.75169C9.22079 7.20502 8.78579 6.51002 8.15496 6.04919C8.07337 5.99057 7.97803 5.95401 7.87817 5.94306C7.77831 5.93211 7.67731 5.94714 7.58496 5.98669C6.81829 6.31502 6.15496 7.15669 6.18663 8.02252C6.20746 8.59085 6.42996 10.2 8.11496 11.8859Z" fill="currentColor"></path></svg>
+                                                        </a>
+                                                        <a href="#" target="_blank" class="share25-social-button share25-social-button--x">
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.74004 12.2092L12.7084 17.5H18.5417L11.9934 8.76833L17.4417 2.5H15.2334L10.9692 7.405L7.29171 2.5H1.45837L7.71671 10.8458L1.93337 17.5H4.14171L8.74004 12.2092ZM13.5417 15.8333L4.79171 4.16667H6.45837L15.2084 15.8333H13.5417Z" fill="currentColor"></path></svg>
+                                                        </a>
+                                                        <a href="#" target="_blank" class="share25-social-button share25-social-button--telegram">
+                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5696 1.00093C11.7577 1.01024 12.9323 1.25474 14.0255 1.72032C15.1187 2.18589 16.1088 2.86333 16.9389 3.71354C17.7699 4.56405 18.4241 5.5708 18.8637 6.67563C19.3034 7.78045 19.5197 8.96144 19.5003 10.1504C18.8901 22.0232 1.89982 21.9224 1.50022 10.0109C1.49191 8.8197 1.72134 7.63884 2.17506 6.53743C2.62879 5.43603 3.2977 4.43622 4.14263 3.59654C4.98707 2.75771 5.99057 2.09602 7.09421 1.6503C8.19786 1.20457 9.37943 0.983796 10.5696 1.00093ZM12.2058 8.53936C12.2058 8.53936 12.2202 8.54836 12.1095 8.68876C11.9738 8.85257 11.8268 9.00656 11.6694 9.14956L9.37975 11.3726C8.89015 11.8622 8.90005 12.1628 9.46975 12.5732C10.1997 13.0934 10.9395 13.574 11.6901 14.0852C12.4398 14.5955 13.3596 15.3452 13.7403 14.2445C13.8369 13.9505 13.9101 13.6505 13.9599 13.3445C14.1201 12.4625 14.2803 11.5823 14.4198 10.6913C14.6097 9.44026 14.7897 8.18926 14.9499 6.92745C15.03 6.30645 14.6997 6.02655 14.0796 6.17685C13.8238 6.23699 13.5732 6.31703 13.3299 6.41625L6.79944 9.17026C6.18024 9.42947 5.56014 9.71027 4.94993 10.0109C4.79963 10.0901 4.60973 10.3106 4.61963 10.4609C4.62953 10.6112 4.84013 10.7813 5.01023 10.8515C5.42964 11.0216 5.87964 11.1413 6.31974 11.2817C6.65444 11.396 7.01223 11.4257 7.36119 11.368C7.71014 11.3104 8.03939 11.1672 8.31955 10.9514C9.15024 10.3592 9.99375 9.78512 10.8495 9.22966C11.25 8.95966 11.5299 8.80936 11.9205 8.53846C12.1203 8.43946 12.1653 8.39266 12.2058 8.45296V8.53936Z" fill="currentColor"></path></svg>
+                                                        </a>
+                                                        <a href="#" target="_blank" class="share25-social-button share25-social-button--linkedin">
+                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.05511 3.77844C6.05487 4.24988 5.86737 4.70191 5.53385 5.0351C5.20032 5.36829 4.7481 5.55535 4.27667 5.55511C3.80523 5.55487 3.35319 5.36737 3.02001 5.03385C2.68682 4.70032 2.49976 4.2481 2.5 3.77667C2.50024 3.30523 2.68774 2.85319 3.02126 2.52001C3.35479 2.18682 3.80701 1.99976 4.27844 2C4.74988 2.00024 5.20191 2.18774 5.5351 2.52126C5.86829 2.85479 6.05535 3.30701 6.05511 3.77844ZM6.10844 6.87139H2.55333V17.9989H6.10844V6.87139ZM11.7255 6.87139H8.18817V17.9989H11.69V12.1596C11.69 8.90669 15.9294 8.60451 15.9294 12.1596V17.9989H19.4401V10.9509C19.4401 5.46712 13.1653 5.67154 11.69 8.36453L11.7255 6.87139Z" fill="currentColor"></path></svg>
+                                                        </a>
+                                                    </div>
+                                                    <a href="#" target="_blank" class="share25-copy text-primary border-primary hover:bg-primary hover:text-white">
+                                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.50004 8.50002C9.50004 10.62 7.78671 12.3334 5.66671 12.3334C3.54671 12.3334 1.83337 10.62 1.83337 8.50002C1.83337 6.38002 3.54671 4.66669 5.66671 4.66669" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.16663 8.5C7.16663 6.29333 8.95996 4.5 11.1666 4.5C13.3733 4.5 15.1666 6.29333 15.1666 8.5C15.1666 10.7067 13.3733 12.5 11.1666 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                        <span>Copy Link</span>
+                                                    </a>
+                                                </div>
+                                                <div class="share25-dropdown-bottom border-neutral-200">
+                                                    <span class="share25-cancel hover:text-primary">Batalkan</span>
+                                                </div>
+                                            </div>
                                         </div>
+
                                     </div>
 
                                     <div class="box box-topic border-black">
@@ -759,7 +835,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="box box-news border-black">
+                                    <!-- <div class="box box-news border-black">
                                         <h2 class="box-title box-title--noborder font-head text-3xl">BERITA TERKAIT</h2>
                                         <div class="box-news-list">
                                             <a href="#" class="item">
@@ -879,7 +955,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     
                                 </div>
                                 <div class="section--gridWaside-row-aside w-[300px]">
@@ -906,66 +982,66 @@
                                         <div class="box--trending-list">
                                             <div class="box box--noborder box-news">
                                                 <div class="box-news-list box-news-list--number">
-                                                    <div class="item">
-                                                        <div class="item-desc">
+                                                    <div class="item25 item25--row">
+                                                        <div class="item25-desc">
                                                             <a href="#" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
-                                                            <p class="item-desc-title font-head line-clamp-3 hover:text-primary">
+                                                            <p class="item25-desc-title font-head line-clamp-3 hover:text-primary">
                                                                 <a href="#">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
                                                             </p>
                                                         </div>
-                                                        <div class="item-image aspect-square w-1/3">
+                                                        <div class="item25-image aspect-square w-1/3">
                                                             <a href="#">
                                                                 <img src="assets/images/latest-1.png" width="300" height="150" class="object-cover w-full h-full" alt="image">
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="item">
-                                                        <div class="item-desc">
+                                                    <div class="item25 item25--row">
+                                                        <div class="item25-desc">
                                                             <a href="#" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
-                                                            <p class="item-desc-title font-head line-clamp-3 hover:text-primary">
+                                                            <p class="item25-desc-title font-head line-clamp-3 hover:text-primary">
                                                                 <a href="#">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
                                                             </p>
                                                         </div>
-                                                        <div class="item-image aspect-square w-1/3">
+                                                        <div class="item25-image aspect-square w-1/3">
                                                             <a href="#">
                                                                 <img src="assets/images/latest-2.png" width="300" height="150" class="object-cover w-full h-full" alt="image">
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="item">
-                                                        <div class="item-desc">
+                                                    <div class="item25 item25--row">
+                                                        <div class="item25-desc">
                                                             <a href="#" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
-                                                            <p class="item-desc-title font-head line-clamp-3 hover:text-primary">
+                                                            <p class="item25-desc-title font-head line-clamp-3 hover:text-primary">
                                                                 <a href="#">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
                                                             </p>
                                                         </div>
-                                                        <div class="item-image aspect-square w-1/3">
+                                                        <div class="item25-image aspect-square w-1/3">
                                                             <a href="#">
                                                                 <img src="assets/images/latest-3.png" width="300" height="150" class="object-cover w-full h-full" alt="image">
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="item">
-                                                        <div class="item-desc">
+                                                    <div class="item25 item25--row">
+                                                        <div class="item25-desc">
                                                             <a href="#" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
-                                                            <p class="item-desc-title font-head line-clamp-3 hover:text-primary">
+                                                            <p class="item25-desc-title font-head line-clamp-3 hover:text-primary">
                                                                 <a href="#">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
                                                             </p>
                                                         </div>
-                                                        <div class="item-image aspect-square w-1/3">
+                                                        <div class="item25-image aspect-square w-1/3">
                                                             <a href="#">
                                                                 <img src="assets/images/latest-4.png" width="300" height="150" class="object-cover w-full h-full" alt="image">
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="item">
-                                                        <div class="item-desc">
+                                                    <div class="item25 item25--row">
+                                                        <div class="item25-desc">
                                                             <a href="#" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
-                                                            <p class="item-desc-title font-head line-clamp-3 hover:text-primary">
+                                                            <p class="item25-desc-title font-head line-clamp-3 hover:text-primary">
                                                                 <a href="#">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
                                                             </p>
                                                         </div>
-                                                        <div class="item-image aspect-square w-1/3">
+                                                        <div class="item25-image aspect-square w-1/3">
                                                             <a href="#">
                                                                 <img src="assets/images/latest-5.png" width="300" height="150" class="object-cover w-full h-full" alt="image">
                                                             </a>
@@ -976,6 +1052,122 @@
                                         </div>
                                     </div>
 
+
+                                    <div class="box box-news border-black">
+                                        <h2 class="box-title box-title--noborder font-head text-3xl">REKOMENDASI</h2>
+                                        <div class="box-news-list">
+                                            <div class="item25">
+                                                <div class="item25-desc">
+                                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                                    <p class="item25-desc-title font-medium font-head text-2xl line-clamp-3 hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                </div>
+                                                <div class="item25-image aspect-[2/1] w-full">
+                                                    <a href=""><img src="assets/images/latest-1.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-2.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-3.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-4.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-5.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25">
+                                                <div class="item25-desc">
+                                                    <a href="" class="item25-desc-tag text-xs text-secondary font-semibold hover:underline">Artis</a>
+                                                    <p class="item25-desc-title font-medium font-head text-2xl line-clamp-3 hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                </div>
+                                                <div class="item25-image aspect-[2/1] w-full">
+                                                    <a href=""><img src="assets/images/latest-1.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-2.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-3.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-4.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="item25 item25--row">
+                                                <div class="item25-desc">
+                                                    <p class="item25-desc-title font-medium text-sm hover:text-primary">
+                                                        <a href="">8 Potret Al Ghazali Ungkap Pilih Kontrak Rumah usai Menikah dengan Alyssa Daguise, Begini Reaksi Ahmad Dhani</a>
+                                                    </p>
+                                                    <span class="item25-time text-xs text-neutral-500">4 jam yang lalu</span>
+                                                </div>
+                                                <div class="item25-image aspect-square w-1/3">
+                                                    <a href=""><img src="assets/images/latest-5.png" width="300" height="150" class="object-cover w-full h-full" alt="image"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1208,14 +1400,6 @@
         </main>
         <!--end.main-->
 
-        <div class="popup" data-popup-open="trailer">
-            <span class="popup-overlay bg-black/80" data-popup-close></span>
-            <div class="popup-inner">
-                <div class="popup-video bg-black">
-                    <iframe class="popup-iframe w-full h-full" width="335" height="212" data-src="https://www.youtube.com/embed/-sAOWhvheK8?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
        <!--footer-->
        <footer class="footer25 bg-fourth">
             <div class="container25">

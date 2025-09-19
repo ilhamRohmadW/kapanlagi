@@ -1,76 +1,91 @@
-.section
-    &--dt
-        &-breadcrumb 
-            @apply mb-3 flex items-center flex-wrap gap-1.5 *:last:after:hidden *:after:ml-1.5 *:after:content-['>']
-        &-paragraph:first-child 
-            p:first-of-type
-                @apply first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-3 first-letter:float-left first-letter:font-head 
-        &-title
-            @apply mb-13
-        &-row
-            @apply flex flex-wrap items-center gap-2 justify-between
-            &--top
-                @apply border-b pb-4
-            &--bottom
-                @apply px-4 py-1 rounded-lg mb-6
+@layer components 
+    .section
+        &--dt
+            &-breadcrumb 
+                @apply flex items-center flex-wrap gap-1.5 *:last:after:hidden *:after:ml-1.5 *:after:content-['>']
+            &-paragraph:first-child 
+                p:first-of-type
+                    @apply first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-3 first-letter:float-left first-letter:font-head 
             &-title
-                @apply flex items-center justify-between
-        &-paragraph
-            h2
-                @apply font-head text-xl
-        &-image
-            &-figure
-                @apply aspect-square overflow-hidden mb-2
-            span
-                @apply block text-right
-        &-body
-            @apply space-y-4 mb-4
-        &-paragraph
-            @apply space-y-4
-            .line
-                @apply text-center italic text-xs relative block after:border-t after:border-dashed after:absolute after:top-1/2 after:inset-x-0
+                @apply flex-1
+            &-row
+                @apply flex flex-wrap items-center gap-2 justify-between
+                &--top
+                    @apply border-b pb-4 flex justify-between
+                &--bottom
+                    @apply px-4 py-1 rounded-lg mb-6
+                &-title
+                    @apply flex items-center justify-between
+            &-paragraph
+                h2
+                    @apply font-head text-xl
+            &-image
+                &-figure
+                    @apply aspect-square overflow-hidden mb-2
                 span
-                    @apply inline-block bg-white relative z-10
-.crosslink
-    @apply flex items-center justify-between gap-2 border-t
-    &--listing
-        @apply flex-col items-start gap-0 border-t p-4
-    &-title
-        @apply mb-2
-    &-list
-        @apply flex flex-col divide-y
-    svg
-        @apply shrink-0 size-4
-.editor
-    @apply flex items-center gap-2
-    &-image
-        @apply size-10 shrink-0 rounded-full flex items-center justify-center
-    &-detail
-        @apply flex flex-col flex-1
-.box
-    &--border
-        @apply py-6 border-t-2
-    &-topic
+                    @apply block text-right
+            &-body
+                @apply space-y-4 mb-4
+            &-paragraph
+                @apply space-y-4
+                .line
+                    @apply text-center italic text-xs relative block after:border-t after:border-dashed after:absolute after:top-1/2 after:inset-x-0
+                    span
+                        @apply inline-block bg-white relative z-10
+            &-headline
+                @apply mb-12
+                &-row
+                    @apply items-stretch flex justify-between gap-6 pb-10
+                    // @apply before:absolute before:inset-0 before:backdrop-blur-md before:pointer-events-none
+                    // @apply before:bg-gradient-to-t before:from-fifth before:from-60% before:to-fifth/60
+                    // style="background-image: url('assets/images/detail.png')
+                &-left
+                    @apply flex flex-col justify-between gap-3
+                    .share25-item
+                        @apply size-8
+                &-right
+                    @apply shrink-0 max-w-[500px] w-[45%] lg:w-1/2
+    .crosslink
+        @apply flex items-center justify-between gap-2 border-t p-4
+        &--listing
+            @apply flex-col items-start gap-0 border-t
+        &-title
+            @apply mb-2
         &-list
-            @apply flex items-center gap-3 flex-wrap
-            &-item
-                @apply py-1 px-3 transition-colors border border-black/50 rounded hover:bg-black hover:text-white
-    &-title--noborder
-        @apply mb-3 border-b-0 pb-0
-    &-news
-        &-list
-            @apply flex flex-col divide-y space-y-4 -mt-4
-            .item
-                @apply py-4 mb-0
-            &--number
-                counter-reset: my-counter
-                .item::before
-                    content: counter(my-counter) ". "
-                    counter-increment: my-counter
-                    @apply font-head text-3xl text-secondary
-.item 
-    @apply flex gap-4 flex-row items-start
-    &-desc
-        @apply flex-1 flex flex-col gap-1
-    &-image
-        @apply shrink-0 max-w-44
+            @apply flex flex-col divide-y
+        svg
+            @apply shrink-0 size-4
+    .editor
+        @apply flex items-center gap-2
+        &-image
+            @apply size-8 shrink-0 rounded-full flex items-center justify-center
+        &-detail
+            @apply flex flex-col flex-1
+    .box
+        &--border
+            @apply py-6 border-t-2
+        &-topic
+            &-list
+                @apply flex items-center gap-3 flex-wrap
+                &-item
+                    @apply py-1 px-3 transition-colors border border-black/50 rounded hover:bg-black hover:text-white
+        &-title--noborder
+            @apply mb-3 border-b-0 pb-0
+        &-news
+            @apply border-t pt-5
+            &-list
+                @apply flex flex-col divide-y -my-4
+                .item25
+                    @apply py-4 mb-0
+                &--number
+                    counter-reset: my-counter
+                    .item25::before
+                        content: counter(my-counter) ". "
+                        counter-increment: my-counter
+                        @apply font-head text-3xl text-secondary
+    // .item 
+    //     @apply flex gap-4 flex-row items-start
+    //     &-desc
+    //         @apply flex-1 flex flex-col gap-1
+    //     &-image
+    //         @apply shrink-0

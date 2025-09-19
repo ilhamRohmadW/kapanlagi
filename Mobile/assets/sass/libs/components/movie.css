@@ -61,12 +61,6 @@
 }
 
 @layer components {
-  .header25--movie {
-    @apply bg-fifth {}
-  }
-  .header25--movie .header25-fixed {
-    @apply bg-fifth/70! text-white! {}
-  }
   .item-25HMovie .item25-desc {
     @apply absolute px-4 pb-17 pt-8 bottom-0 inset-x-0 pointer-events-none *:pointer-events-auto z-20 flex flex-col gap-2 {}
   }

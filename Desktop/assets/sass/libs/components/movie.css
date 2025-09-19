@@ -61,12 +61,6 @@
 }
 
 @layer components {
-  .header25--movie {
-    @apply bg-fifth {}
-  }
-  .header25--movie .header25-fixed {
-    @apply bg-fifth/70! text-white! {}
-  }
   .item-25HMovie .item25-desc {
     @apply absolute pl-4 pb-12 pt-32 bottom-0 inset-x-0 pointer-events-none *:pointer-events-auto z-20 flex flex-col gap-2 pr-80 {}
   }
@@ -189,7 +183,7 @@
     @apply flex flex-col {}
   }
   .section--DTMovie-rateWTrailer {
-    @apply flex items-stretch gap-5 {}
+    @apply flex items-stretch gap-5 flex-wrap {}
   }
   .section--DTMovie-rateWTrailer-item {
     @apply flex items-center gap-2 px-3 py-1 {}
