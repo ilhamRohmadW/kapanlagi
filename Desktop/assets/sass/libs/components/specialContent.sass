@@ -1,0 +1,50 @@
+.special
+    &-wrapper
+        @apply overflow-hidden flex flex-row aspect-[640/330]
+    &--wide
+        .special
+            &-wrapper
+                @apply aspect-[980/342]
+            &-pict
+                @apply flex-1 h-full w-1/2 max-w-none
+            &-inner
+                @apply py-5 pl-4 pr-6 w-1/2 flex-none
+    &-pict
+        @apply flex-1 h-full max-w-65
+        &-figure
+            @apply w-full h-full
+            &-img
+                @apply content-(--wscBackground) w-full h-full object-cover
+    &-inner
+        @apply relative p-5 overflow-visible flex-1
+        @apply before:absolute before:-inset-7 before:rotate-y-180 before:blur-md before:pointer-events-none before:z-0
+        &::before
+            background-image: var(--wscBackground)
+            background-size: 100% 100%
+        &-box
+            @apply relative px-4 py-5 h-full overflow-y-auto z-10
+            &-list
+                @apply flex flex-col
+                &-item
+                    @apply py-4 border-b
+                    &-link
+                        @apply flex gap-3 items-start
+                    &-detail
+                        @apply flex-1 flex flex-col gap-1.5
+                    &-title,
+                    &-time
+                        @apply font-body!
+                    &-figure
+                        @apply overflow-hidden w-[100px]
+                        &-img
+                            @apply w-full h-full object-cover
+                            outline: 2px solid red
+
+            &-title
+                @apply font-head!
+            &-list-item
+                &:last-child
+                    border-bottom-width: 0
+                    padding-bottom: 0
+            &-button
+                @apply py-3 border flex items-center justify-center font-semibold mt-6 transition-colors
